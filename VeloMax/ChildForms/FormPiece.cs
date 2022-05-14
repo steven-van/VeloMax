@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace VeloMax.ChildForms
 {
-    public partial class FormFournisseur : Form
+    public partial class FormPiece : Form
     {
-        public FormFournisseur()
+        public FormPiece()
         {
             InitializeComponent();
         }
 
-        private void FormFournisseur_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

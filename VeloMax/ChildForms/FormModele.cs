@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace VeloMax.ChildForms
 {
-    public partial class FormFournisseur : Form
+    public partial class FormModele : Form
     {
-        public FormFournisseur()
+        public FormModele()
         {
             InitializeComponent();
         }
 
-        private void FormFournisseur_Load(object sender, EventArgs e)
+        private void FormCommande_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

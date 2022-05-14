@@ -97,20 +97,34 @@ namespace VeloMax
         private void btnStock_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormCommande());
+            OpenChildForm(new ChildForms.FormStock());
         }
 
         private void btnCommande_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormStock());
+            OpenChildForm(new ChildForms.FormCommande());
 
         }
+
+        private void btnModele_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new ChildForms.FormModele());
+        }
+
+        private void btnPiece_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new ChildForms.FormPiece());
+        }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
 
         private void btnHome_Click(object sender, EventArgs e)
         {

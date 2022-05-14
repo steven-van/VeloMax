@@ -16,5 +16,10 @@ namespace VeloMax.ChildForms
         {
             InitializeComponent();
         }
+
+        private void FormCommande_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

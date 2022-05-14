@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnModele = new FontAwesome.Sharp.IconButton();
+            this.btnPiece = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnStats = new FontAwesome.Sharp.IconButton();
             this.btnStock = new FontAwesome.Sharp.IconButton();
@@ -55,6 +57,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.panelMenu.Controls.Add(this.btnModele);
+            this.panelMenu.Controls.Add(this.btnPiece);
             this.panelMenu.Controls.Add(this.btnExit);
             this.panelMenu.Controls.Add(this.btnStats);
             this.panelMenu.Controls.Add(this.btnStock);
@@ -64,8 +68,52 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 544);
+            this.panelMenu.Size = new System.Drawing.Size(220, 729);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnModele
+            // 
+            this.btnModele.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModele.FlatAppearance.BorderSize = 0;
+            this.btnModele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModele.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModele.ForeColor = System.Drawing.Color.White;
+            this.btnModele.IconChar = FontAwesome.Sharp.IconChar.Bicycle;
+            this.btnModele.IconColor = System.Drawing.Color.White;
+            this.btnModele.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModele.IconSize = 40;
+            this.btnModele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModele.Location = new System.Drawing.Point(0, 400);
+            this.btnModele.Name = "btnModele";
+            this.btnModele.Padding = new System.Windows.Forms.Padding(5);
+            this.btnModele.Size = new System.Drawing.Size(220, 60);
+            this.btnModele.TabIndex = 7;
+            this.btnModele.Text = "Modèles";
+            this.btnModele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModele.UseVisualStyleBackColor = true;
+            this.btnModele.Click += new System.EventHandler(this.btnModele_Click);
+            // 
+            // btnPiece
+            // 
+            this.btnPiece.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPiece.FlatAppearance.BorderSize = 0;
+            this.btnPiece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiece.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiece.ForeColor = System.Drawing.Color.White;
+            this.btnPiece.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnPiece.IconColor = System.Drawing.Color.White;
+            this.btnPiece.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPiece.IconSize = 40;
+            this.btnPiece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPiece.Location = new System.Drawing.Point(0, 340);
+            this.btnPiece.Name = "btnPiece";
+            this.btnPiece.Padding = new System.Windows.Forms.Padding(5);
+            this.btnPiece.Size = new System.Drawing.Size(220, 60);
+            this.btnPiece.TabIndex = 6;
+            this.btnPiece.Text = "Pieces";
+            this.btnPiece.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPiece.UseVisualStyleBackColor = true;
+            this.btnPiece.Click += new System.EventHandler(this.btnPiece_Click);
             // 
             // btnExit
             // 
@@ -78,7 +126,7 @@
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 40;
-            this.btnExit.Location = new System.Drawing.Point(0, 484);
+            this.btnExit.Location = new System.Drawing.Point(0, 669);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5);
             this.btnExit.Size = new System.Drawing.Size(220, 60);
@@ -206,7 +254,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(220, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(958, 100);
+            this.panelHeader.Size = new System.Drawing.Size(1255, 100);
             this.panelHeader.TabIndex = 1;
             // 
             // labelTitleActiveForm
@@ -241,7 +289,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 100);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(958, 444);
+            this.panelDesktop.Size = new System.Drawing.Size(1255, 629);
             this.panelDesktop.TabIndex = 2;
             // 
             // labelDate
@@ -250,7 +298,7 @@
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.Color.White;
-            this.labelDate.Location = new System.Drawing.Point(378, 213);
+            this.labelDate.Location = new System.Drawing.Point(526, 305);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(181, 44);
             this.labelDate.TabIndex = 1;
@@ -262,7 +310,7 @@
             this.labelHours.AutoSize = true;
             this.labelHours.Font = new System.Drawing.Font("Montserrat SemiBold", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(48)))));
-            this.labelHours.Location = new System.Drawing.Point(373, 136);
+            this.labelHours.Location = new System.Drawing.Point(521, 228);
             this.labelHours.Name = "labelHours";
             this.labelHours.Size = new System.Drawing.Size(289, 77);
             this.labelHours.TabIndex = 0;
@@ -278,7 +326,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 544);
+            this.ClientSize = new System.Drawing.Size(1475, 729);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
@@ -313,6 +361,8 @@
         private System.Windows.Forms.Label labelHours;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label labelDate;
+        private FontAwesome.Sharp.IconButton btnModele;
+        private FontAwesome.Sharp.IconButton btnPiece;
     }
 }
 

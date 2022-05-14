@@ -59,6 +59,18 @@
     <Compile Include="ChildForms\FormCommande.Designer.cs">
       <DependentUpon>FormCommande.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\FormModele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormModele.Designer.cs">
+      <DependentUpon>FormModele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormPiece.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormPiece.Designer.cs">
+      <DependentUpon>FormPiece.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\FormStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ChildForms\FormCommande.resx">
       <DependentUpon>FormCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormModele.resx">
+      <DependentUpon>FormModele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormPiece.resx">
+      <DependentUpon>FormPiece.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormStock.resx">
       <DependentUpon>FormStock.cs</DependentUpon>

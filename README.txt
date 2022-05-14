@@ -1,0 +1,1 @@
+FontAwesome.Sharp v5.15.4
