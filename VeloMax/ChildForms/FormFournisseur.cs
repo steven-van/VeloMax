@@ -17,9 +17,57 @@ namespace VeloMax.ChildForms
             InitializeComponent();
         }
 
-        private void FormFournisseur_Load(object sender, EventArgs e)
+        public void Clear()
         {
+            textBoxSiret.Text = textBoxNom.Text = textBoxContact.Text = textBoxAdresse.Text = string.Empty;
+            comboBoxLibelle.ResetText();
+        }
 
+        private void btnAddFournisseur_Click(object sender, EventArgs e)
+        {
+            if (textBoxSiret.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("Veuillez renseigner un siret");
+                return;
+            }
+            if (textBoxSiret.Text.Trim().Length != 14)
+            {
+                MessageBox.Show("Le siret doit contenir 14 chiffres");
+                return;
+            }
+            if (textBoxNom.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("Veuillez renseigner un nom");
+                return;
+            }
+            if (textBoxContact.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("Veuillez renseigner le nom du contact");
+                return;
+            }
+
+            if (textBoxAdresse.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("Veuillez renseigner une adresse");
+                return;
+            }
+
+            if (comboBoxLibelle.SelectedItem.ToString() == "")
+            {
+                MessageBox.Show("Veuillez renseigner un libelle");
+                return;
+            }
+            
+            if(btnAddFournisseur.Text == "Ajouter")
+            {
+                string siret = textBoxSiret.Text;
+                string nom = textBoxNom.Text;
+                string contact = textBoxContact.Text;
+                string adresse = textBoxAdresse.Text;
+                string libelle = comboBoxLibelle.SelectedItem.ToString();
+                DBVeloMax.AddFournisseur(siret, nom, contact, adresse, libelle);
+                Clear();
+            }
         }
     }
 }

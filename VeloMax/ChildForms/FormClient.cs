@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace VeloMax.ChildForms
 {
-    public partial class FormPiece : Form
+    public partial class FormClient : Form
     {
-        public FormPiece()
+        public FormClient()
         {
             InitializeComponent();
-        }
-
-        private void FormPiece_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddPiece_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

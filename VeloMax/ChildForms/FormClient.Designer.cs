@@ -1,6 +1,6 @@
 ﻿namespace VeloMax.ChildForms
 {
-    partial class FormStock
+    partial class FormClient
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FormStock
+            // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1255, 629);
-            this.Name = "FormStock";
-            this.Text = "FormFournisseur";
+            this.ClientSize = new System.Drawing.Size(1233, 573);
+            this.Name = "FormClient";
+            this.Text = "FormClient";
             this.ResumeLayout(false);
 
         }

@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.labelDesc = new System.Windows.Forms.Label();
-            this.labelIdPiece = new System.Windows.Forms.Label();
             this.labelDelaiA = new System.Windows.Forms.Label();
             this.labelDateD = new System.Windows.Forms.Label();
             this.labelStock = new System.Windows.Forms.Label();
             this.labelDateI = new System.Windows.Forms.Label();
             this.labelPrixU = new System.Windows.Forms.Label();
-            this.textBoxIdPiece = new System.Windows.Forms.TextBox();
             this.textBoxDesc = new System.Windows.Forms.TextBox();
-            this.textBoxPrixU = new System.Windows.Forms.TextBox();
-            this.textBoxStock = new System.Windows.Forms.TextBox();
-            this.textBoxDateI = new System.Windows.Forms.TextBox();
-            this.textBoxDateD = new System.Windows.Forms.TextBox();
-            this.textBoxDateA = new System.Windows.Forms.TextBox();
+            this.labelCategorie = new System.Windows.Forms.Label();
+            this.comboBoxCategorie = new System.Windows.Forms.ComboBox();
+            this.datePickerDateI = new System.Windows.Forms.DateTimePicker();
+            this.datePickerDateD = new System.Windows.Forms.DateTimePicker();
+            this.numDelaiA = new System.Windows.Forms.NumericUpDown();
+            this.numStock = new System.Windows.Forms.NumericUpDown();
+            this.numPrixU = new System.Windows.Forms.NumericUpDown();
             this.btnAddPiece = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.numDelaiA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrixU)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDesc
@@ -51,23 +54,11 @@
             this.labelDesc.AutoSize = true;
             this.labelDesc.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDesc.ForeColor = System.Drawing.Color.White;
-            this.labelDesc.Location = new System.Drawing.Point(101, 203);
+            this.labelDesc.Location = new System.Drawing.Point(105, 133);
             this.labelDesc.Name = "labelDesc";
             this.labelDesc.Size = new System.Drawing.Size(129, 28);
             this.labelDesc.TabIndex = 1;
             this.labelDesc.Text = "Description";
-            // 
-            // labelIdPiece
-            // 
-            this.labelIdPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelIdPiece.AutoSize = true;
-            this.labelIdPiece.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdPiece.ForeColor = System.Drawing.Color.White;
-            this.labelIdPiece.Location = new System.Drawing.Point(101, 131);
-            this.labelIdPiece.Name = "labelIdPiece";
-            this.labelIdPiece.Size = new System.Drawing.Size(119, 28);
-            this.labelIdPiece.TabIndex = 2;
-            this.labelIdPiece.Text = "Identifiant";
             // 
             // labelDelaiA
             // 
@@ -75,7 +66,7 @@
             this.labelDelaiA.AutoSize = true;
             this.labelDelaiA.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDelaiA.ForeColor = System.Drawing.Color.White;
-            this.labelDelaiA.Location = new System.Drawing.Point(615, 280);
+            this.labelDelaiA.Location = new System.Drawing.Point(588, 295);
             this.labelDelaiA.Name = "labelDelaiA";
             this.labelDelaiA.Size = new System.Drawing.Size(286, 28);
             this.labelDelaiA.TabIndex = 3;
@@ -87,7 +78,7 @@
             this.labelDateD.AutoSize = true;
             this.labelDateD.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateD.ForeColor = System.Drawing.Color.White;
-            this.labelDateD.Location = new System.Drawing.Point(615, 203);
+            this.labelDateD.Location = new System.Drawing.Point(618, 212);
             this.labelDateD.Name = "labelDateD";
             this.labelDateD.Size = new System.Drawing.Size(256, 28);
             this.labelDateD.TabIndex = 4;
@@ -99,7 +90,7 @@
             this.labelStock.AutoSize = true;
             this.labelStock.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStock.ForeColor = System.Drawing.Color.White;
-            this.labelStock.Location = new System.Drawing.Point(101, 363);
+            this.labelStock.Location = new System.Drawing.Point(166, 295);
             this.labelStock.Name = "labelStock";
             this.labelStock.Size = new System.Drawing.Size(68, 28);
             this.labelStock.TabIndex = 5;
@@ -111,7 +102,7 @@
             this.labelDateI.AutoSize = true;
             this.labelDateI.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateI.ForeColor = System.Drawing.Color.White;
-            this.labelDateI.Location = new System.Drawing.Point(615, 131);
+            this.labelDateI.Location = new System.Drawing.Point(664, 135);
             this.labelDateI.Name = "labelDateI";
             this.labelDateI.Size = new System.Drawing.Size(210, 28);
             this.labelDateI.TabIndex = 6;
@@ -123,74 +114,89 @@
             this.labelPrixU.AutoSize = true;
             this.labelPrixU.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrixU.ForeColor = System.Drawing.Color.White;
-            this.labelPrixU.Location = new System.Drawing.Point(101, 280);
+            this.labelPrixU.Location = new System.Drawing.Point(99, 212);
             this.labelPrixU.Name = "labelPrixU";
             this.labelPrixU.Size = new System.Drawing.Size(135, 28);
             this.labelPrixU.TabIndex = 7;
             this.labelPrixU.Text = "Prix Unitaire";
             // 
-            // textBoxIdPiece
-            // 
-            this.textBoxIdPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxIdPiece.Location = new System.Drawing.Point(277, 135);
-            this.textBoxIdPiece.MaxLength = 14;
-            this.textBoxIdPiece.Name = "textBoxIdPiece";
-            this.textBoxIdPiece.Size = new System.Drawing.Size(231, 26);
-            this.textBoxIdPiece.TabIndex = 8;
-            // 
             // textBoxDesc
             // 
             this.textBoxDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDesc.Location = new System.Drawing.Point(277, 203);
+            this.textBoxDesc.Location = new System.Drawing.Point(275, 135);
             this.textBoxDesc.MaxLength = 14;
             this.textBoxDesc.Name = "textBoxDesc";
             this.textBoxDesc.Size = new System.Drawing.Size(231, 26);
             this.textBoxDesc.TabIndex = 9;
             // 
-            // textBoxPrixU
+            // labelCategorie
             // 
-            this.textBoxPrixU.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxPrixU.Location = new System.Drawing.Point(277, 284);
-            this.textBoxPrixU.MaxLength = 14;
-            this.textBoxPrixU.Name = "textBoxPrixU";
-            this.textBoxPrixU.Size = new System.Drawing.Size(231, 26);
-            this.textBoxPrixU.TabIndex = 10;
+            this.labelCategorie.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelCategorie.AutoSize = true;
+            this.labelCategorie.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategorie.ForeColor = System.Drawing.Color.White;
+            this.labelCategorie.Location = new System.Drawing.Point(764, 371);
+            this.labelCategorie.Name = "labelCategorie";
+            this.labelCategorie.Size = new System.Drawing.Size(110, 28);
+            this.labelCategorie.TabIndex = 16;
+            this.labelCategorie.Text = "Catégorie";
             // 
-            // textBoxStock
+            // comboBoxCategorie
             // 
-            this.textBoxStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxStock.Location = new System.Drawing.Point(277, 367);
-            this.textBoxStock.MaxLength = 14;
-            this.textBoxStock.Name = "textBoxStock";
-            this.textBoxStock.Size = new System.Drawing.Size(231, 26);
-            this.textBoxStock.TabIndex = 11;
+            this.comboBoxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategorie.FormattingEnabled = true;
+            this.comboBoxCategorie.Items.AddRange(new object[] {
+            "Cadre",
+            "Guidon",
+            "Freins",
+            "Selle",
+            "Dérailleur avant",
+            "Dérailleur arrière",
+            "Roue avant",
+            "Roue arrière",
+            "Réflecteurs",
+            "Pédalie",
+            "Ordinateur",
+            "Panier"});
+            this.comboBoxCategorie.Location = new System.Drawing.Point(933, 371);
+            this.comboBoxCategorie.Name = "comboBoxCategorie";
+            this.comboBoxCategorie.Size = new System.Drawing.Size(231, 28);
+            this.comboBoxCategorie.TabIndex = 17;
             // 
-            // textBoxDateI
+            // datePickerDateI
             // 
-            this.textBoxDateI.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDateI.Location = new System.Drawing.Point(933, 135);
-            this.textBoxDateI.MaxLength = 14;
-            this.textBoxDateI.Name = "textBoxDateI";
-            this.textBoxDateI.Size = new System.Drawing.Size(231, 26);
-            this.textBoxDateI.TabIndex = 12;
+            this.datePickerDateI.Location = new System.Drawing.Point(933, 137);
+            this.datePickerDateI.Name = "datePickerDateI";
+            this.datePickerDateI.Size = new System.Drawing.Size(231, 26);
+            this.datePickerDateI.TabIndex = 28;
             // 
-            // textBoxDateD
+            // datePickerDateD
             // 
-            this.textBoxDateD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDateD.Location = new System.Drawing.Point(933, 203);
-            this.textBoxDateD.MaxLength = 14;
-            this.textBoxDateD.Name = "textBoxDateD";
-            this.textBoxDateD.Size = new System.Drawing.Size(231, 26);
-            this.textBoxDateD.TabIndex = 13;
+            this.datePickerDateD.Location = new System.Drawing.Point(933, 212);
+            this.datePickerDateD.Name = "datePickerDateD";
+            this.datePickerDateD.Size = new System.Drawing.Size(231, 26);
+            this.datePickerDateD.TabIndex = 29;
             // 
-            // textBoxDateA
+            // numDelaiA
             // 
-            this.textBoxDateA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDateA.Location = new System.Drawing.Point(933, 284);
-            this.textBoxDateA.MaxLength = 14;
-            this.textBoxDateA.Name = "textBoxDateA";
-            this.textBoxDateA.Size = new System.Drawing.Size(231, 26);
-            this.textBoxDateA.TabIndex = 14;
+            this.numDelaiA.Location = new System.Drawing.Point(933, 300);
+            this.numDelaiA.Name = "numDelaiA";
+            this.numDelaiA.Size = new System.Drawing.Size(231, 26);
+            this.numDelaiA.TabIndex = 30;
+            // 
+            // numStock
+            // 
+            this.numStock.Location = new System.Drawing.Point(275, 295);
+            this.numStock.Name = "numStock";
+            this.numStock.Size = new System.Drawing.Size(231, 26);
+            this.numStock.TabIndex = 31;
+            // 
+            // numPrixU
+            // 
+            this.numPrixU.Location = new System.Drawing.Point(275, 217);
+            this.numPrixU.Name = "numPrixU";
+            this.numPrixU.Size = new System.Drawing.Size(231, 26);
+            this.numPrixU.TabIndex = 32;
             // 
             // btnAddPiece
             // 
@@ -210,6 +216,7 @@
             this.btnAddPiece.Text = "Ajouter";
             this.btnAddPiece.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddPiece.UseVisualStyleBackColor = false;
+            this.btnAddPiece.Click += new System.EventHandler(this.btnAddPiece_Click);
             // 
             // FormPiece
             // 
@@ -217,24 +224,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1255, 629);
+            this.Controls.Add(this.numPrixU);
+            this.Controls.Add(this.numStock);
+            this.Controls.Add(this.numDelaiA);
+            this.Controls.Add(this.datePickerDateD);
+            this.Controls.Add(this.datePickerDateI);
+            this.Controls.Add(this.comboBoxCategorie);
+            this.Controls.Add(this.labelCategorie);
             this.Controls.Add(this.btnAddPiece);
-            this.Controls.Add(this.textBoxDateA);
-            this.Controls.Add(this.textBoxDateD);
-            this.Controls.Add(this.textBoxDateI);
-            this.Controls.Add(this.textBoxStock);
-            this.Controls.Add(this.textBoxPrixU);
             this.Controls.Add(this.textBoxDesc);
-            this.Controls.Add(this.textBoxIdPiece);
             this.Controls.Add(this.labelPrixU);
             this.Controls.Add(this.labelDateI);
             this.Controls.Add(this.labelStock);
             this.Controls.Add(this.labelDateD);
             this.Controls.Add(this.labelDelaiA);
-            this.Controls.Add(this.labelIdPiece);
             this.Controls.Add(this.labelDesc);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPiece";
             this.Text = "FormCommande";
+            this.Load += new System.EventHandler(this.FormPiece_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numDelaiA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrixU)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,19 +253,19 @@
         #endregion
 
         private System.Windows.Forms.Label labelDesc;
-        private System.Windows.Forms.Label labelIdPiece;
         private System.Windows.Forms.Label labelDelaiA;
         private System.Windows.Forms.Label labelDateD;
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.Label labelDateI;
         private System.Windows.Forms.Label labelPrixU;
-        private System.Windows.Forms.TextBox textBoxIdPiece;
         private System.Windows.Forms.TextBox textBoxDesc;
-        private System.Windows.Forms.TextBox textBoxPrixU;
-        private System.Windows.Forms.TextBox textBoxStock;
-        private System.Windows.Forms.TextBox textBoxDateI;
-        private System.Windows.Forms.TextBox textBoxDateD;
-        private System.Windows.Forms.TextBox textBoxDateA;
         private FontAwesome.Sharp.IconButton btnAddPiece;
+        private System.Windows.Forms.Label labelCategorie;
+        private System.Windows.Forms.ComboBox comboBoxCategorie;
+        private System.Windows.Forms.DateTimePicker datePickerDateI;
+        private System.Windows.Forms.DateTimePicker datePickerDateD;
+        private System.Windows.Forms.NumericUpDown numDelaiA;
+        private System.Windows.Forms.NumericUpDown numStock;
+        private System.Windows.Forms.NumericUpDown numPrixU;
     }
 }

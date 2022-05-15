@@ -32,7 +32,7 @@ namespace VeloMax
             public static Color white = Color.FromArgb(255, 255, 255);
         }
 
-        private void OpenChildForm(Form childForm)
+        private void OpenSubForm(Form childForm)
         {
 
             if(currentChildForm != null)
@@ -40,13 +40,24 @@ namespace VeloMax
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
-            childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
+
+        private void OpenChildForm(Form childForm)
+        {
+
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.Show();
+        }
+
         private void ActivateButton(object senderBtn)
         {
             if(senderBtn != null)
@@ -153,6 +164,10 @@ namespace VeloMax
             labelDate.Text = DateTime.Now.ToShortDateString();
         }
 
-
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new ChildForms.FormClient());
+        }
     }
 }

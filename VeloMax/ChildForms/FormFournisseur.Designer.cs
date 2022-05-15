@@ -140,6 +140,7 @@
             // comboBoxLibelle
             // 
             this.comboBoxLibelle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxLibelle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLibelle.FormattingEnabled = true;
             this.comboBoxLibelle.Items.AddRange(new object[] {
             "Très bon",
@@ -160,7 +161,7 @@
             this.btnAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFournisseur.ForeColor = System.Drawing.Color.White;
             this.btnAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddFournisseur.IconColor = System.Drawing.Color.White;
+            this.btnAddFournisseur.IconColor = System.Drawing.SystemColors.WindowFrame;
             this.btnAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddFournisseur.Location = new System.Drawing.Point(888, 417);
             this.btnAddFournisseur.Name = "btnAddFournisseur";
@@ -169,6 +170,7 @@
             this.btnAddFournisseur.Text = "Ajouter";
             this.btnAddFournisseur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddFournisseur.UseVisualStyleBackColor = false;
+            this.btnAddFournisseur.Click += new System.EventHandler(this.btnAddFournisseur_Click);
             // 
             // FormFournisseur
             // 
@@ -187,10 +189,8 @@
             this.Controls.Add(this.labelContact);
             this.Controls.Add(this.labelNom);
             this.Controls.Add(this.labelSiret);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormFournisseur";
             this.Text = "FormStock";
-            this.Load += new System.EventHandler(this.FormFournisseur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
