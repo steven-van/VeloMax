@@ -104,7 +104,7 @@ namespace VeloMax
         private void btnCommande_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenSubForm(new ChildForms.FormAddCommande());
+            OpenSubForm(new ChildForms.FormCommande());
 
         }
 

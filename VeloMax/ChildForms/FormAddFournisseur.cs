@@ -27,6 +27,11 @@ namespace VeloMax.ChildForms
             comboBoxLibelle.SelectedItem = null;
         }
 
+        private void FormAddFournisseur_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public void UpdateInfo()
         {
             btnAddFournisseur.Text = "Modifier";

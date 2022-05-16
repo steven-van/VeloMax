@@ -99,6 +99,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildForms\FormAddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormAddClient.Designer.cs">
+      <DependentUpon>FormAddClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\FormClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="ChildForms\FormAddCommande.Designer.cs">
       <DependentUpon>FormAddCommande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormCommande.Designer.cs">
+      <DependentUpon>FormCommande.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\FormFournisseur.cs">
       <SubType>Form</SubType>
@@ -168,11 +180,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildForms\FormAddClient.resx">
+      <DependentUpon>FormAddClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormAddCommande.resx">
       <DependentUpon>FormAddCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormCommande.resx">
+      <DependentUpon>FormCommande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormFournisseur.resx">
       <DependentUpon>FormFournisseur.cs</DependentUpon>

@@ -161,7 +161,7 @@
             this.btnAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFournisseur.ForeColor = System.Drawing.Color.White;
-            this.btnAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.Building;
             this.btnAddFournisseur.IconColor = System.Drawing.SystemColors.WindowFrame;
             this.btnAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddFournisseur.Location = new System.Drawing.Point(263, 540);
@@ -193,6 +193,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAddFournisseur";
             this.Text = "FormAddFournisseur";
+            this.Load += new System.EventHandler(this.FormAddFournisseur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

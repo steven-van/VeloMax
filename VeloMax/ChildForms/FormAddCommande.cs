@@ -12,9 +12,13 @@ namespace VeloMax.ChildForms
 {
     public partial class FormAddCommande : Form
     {
-        public FormAddCommande()
+
+        FormCommande formParent;
+
+        public FormAddCommande(FormCommande parent)
         {
             InitializeComponent();
+            formParent = parent;
         }
 
   

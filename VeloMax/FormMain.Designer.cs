@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnClients = new FontAwesome.Sharp.IconButton();
             this.btnModele = new FontAwesome.Sharp.IconButton();
             this.btnPiece = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -46,7 +47,6 @@
             this.labelDate = new System.Windows.Forms.Label();
             this.labelHours = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btnClients = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -72,6 +72,28 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 729);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnClients
+            // 
+            this.btnClients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClients.ForeColor = System.Drawing.Color.White;
+            this.btnClients.IconChar = FontAwesome.Sharp.IconChar.Male;
+            this.btnClients.IconColor = System.Drawing.Color.White;
+            this.btnClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClients.IconSize = 40;
+            this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClients.Location = new System.Drawing.Point(0, 460);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Padding = new System.Windows.Forms.Padding(5);
+            this.btnClients.Size = new System.Drawing.Size(220, 60);
+            this.btnClients.TabIndex = 8;
+            this.btnClients.Text = "Clients";
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // btnModele
             // 
@@ -323,28 +345,6 @@
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // btnClients
-            // 
-            this.btnClients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClients.FlatAppearance.BorderSize = 0;
-            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClients.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.ForeColor = System.Drawing.Color.White;
-            this.btnClients.IconChar = FontAwesome.Sharp.IconChar.Male;
-            this.btnClients.IconColor = System.Drawing.Color.White;
-            this.btnClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClients.IconSize = 40;
-            this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClients.Location = new System.Drawing.Point(0, 460);
-            this.btnClients.Name = "btnClients";
-            this.btnClients.Padding = new System.Windows.Forms.Padding(5);
-            this.btnClients.Size = new System.Drawing.Size(220, 60);
-            this.btnClients.TabIndex = 8;
-            this.btnClients.Text = "Clients";
-            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClients.UseVisualStyleBackColor = true;
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // FormMain
             // 
