@@ -111,6 +111,12 @@
     <Compile Include="ChildForms\FormCommande.Designer.cs">
       <DependentUpon>FormCommande.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\FormFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormFournisseur.Designer.cs">
+      <DependentUpon>FormFournisseur.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\FormModele.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +141,11 @@
     <Compile Include="ChildForms\FormStats.Designer.cs">
       <DependentUpon>FormStats.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\FormFournisseur.cs">
+    <Compile Include="ChildForms\FormAddFournisseur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\FormFournisseur.Designer.cs">
-      <DependentUpon>FormFournisseur.cs</DependentUpon>
+    <Compile Include="ChildForms\FormAddFournisseur.Designer.cs">
+      <DependentUpon>FormAddFournisseur.cs</DependentUpon>
     </Compile>
     <Compile Include="DBVeloMax.cs" />
     <Compile Include="FormMain.cs">
@@ -156,6 +162,9 @@
     <EmbeddedResource Include="ChildForms\FormCommande.resx">
       <DependentUpon>FormCommande.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormFournisseur.resx">
+      <DependentUpon>FormFournisseur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormModele.resx">
       <DependentUpon>FormModele.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +177,8 @@
     <EmbeddedResource Include="ChildForms\FormStats.resx">
       <DependentUpon>FormStats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\FormFournisseur.resx">
-      <DependentUpon>FormFournisseur.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\FormAddFournisseur.resx">
+      <DependentUpon>FormAddFournisseur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

@@ -40,21 +40,11 @@ namespace VeloMax
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
+            childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
-            childForm.Show();
-        }
-
-        private void OpenChildForm(Form childForm)
-        {
-
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = childForm;
             childForm.Show();
         }
 
@@ -94,40 +84,40 @@ namespace VeloMax
         private void btnFournisseur_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormFournisseur());
+            OpenSubForm(new ChildForms.FormFournisseur());
 
         }
 
         private void btnStats_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormStats());
+            OpenSubForm(new ChildForms.FormStats());
         }
 
 
         private void btnStock_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormStock());
+            OpenSubForm(new ChildForms.FormStock());
         }
 
         private void btnCommande_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormCommande());
+            OpenSubForm(new ChildForms.FormCommande());
 
         }
 
         private void btnModele_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormModele());
+            OpenSubForm(new ChildForms.FormModele());
         }
 
         private void btnPiece_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormPiece());
+            OpenSubForm(new ChildForms.FormPiece());
         }
 
 
@@ -167,7 +157,7 @@ namespace VeloMax
         private void btnClients_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new ChildForms.FormClient());
+            OpenSubForm(new ChildForms.FormClient());
         }
     }
 }

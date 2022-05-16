@@ -12,61 +12,54 @@ namespace VeloMax.ChildForms
 {
     public partial class FormFournisseur : Form
     {
+        FormAddFournisseur formAddFournisseur; 
+
         public FormFournisseur()
         {
             InitializeComponent();
+            formAddFournisseur = new FormAddFournisseur(this);
         }
 
-        public void Clear()
+        public void DisplayFournisseur()
         {
-            textBoxSiret.Text = textBoxNom.Text = textBoxContact.Text = textBoxAdresse.Text = string.Empty;
-            comboBoxLibelle.ResetText();
+            DBVeloMax.DisplayAndSearch("SELECT siret, nom, contact, adresse, libelle FROM Fournisseur;", dataGridViewFournisseur);
+
         }
 
-        private void btnAddFournisseur_Click(object sender, EventArgs e)
+        private void btnOpenAddFournisseur_Click(object sender, EventArgs e)
         {
-            if (textBoxSiret.Text.Trim().Length < 1)
-            {
-                MessageBox.Show("Veuillez renseigner un siret");
-                return;
-            }
-            if (textBoxSiret.Text.Trim().Length != 14)
-            {
-                MessageBox.Show("Le siret doit contenir 14 chiffres");
-                return;
-            }
-            if (textBoxNom.Text.Trim().Length < 1)
-            {
-                MessageBox.Show("Veuillez renseigner un nom");
-                return;
-            }
-            if (textBoxContact.Text.Trim().Length < 1)
-            {
-                MessageBox.Show("Veuillez renseigner le nom du contact");
-                return;
-            }
+            formAddFournisseur.ClearInputs();
+            formAddFournisseur.SaveInfo();
+            formAddFournisseur.ShowDialog();
+        }
 
-            if (textBoxAdresse.Text.Trim().Length < 1)
-            {
-                MessageBox.Show("Veuillez renseigner une adresse");
-                return;
-            }
+        private void FormFournisseur_Shown(object sender, EventArgs e)
+        {
+            DisplayFournisseur();
+        }
 
-            if (comboBoxLibelle.SelectedItem.ToString() == "")
+        private void dataGridViewFournisseur_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
             {
-                MessageBox.Show("Veuillez renseigner un libelle");
+                formAddFournisseur.ClearInputs();
+                formAddFournisseur.siret = dataGridViewFournisseur.Rows[e.RowIndex].Cells[2].Value.ToString();
+                formAddFournisseur.nom = dataGridViewFournisseur.Rows[e.RowIndex].Cells[3].Value.ToString();
+                formAddFournisseur.contact = dataGridViewFournisseur.Rows[e.RowIndex].Cells[4].Value.ToString();
+                formAddFournisseur.adresse = dataGridViewFournisseur.Rows[e.RowIndex].Cells[5].Value.ToString();
+                formAddFournisseur.libelle = dataGridViewFournisseur.Rows[e.RowIndex].Cells[6].Value.ToString();
+                formAddFournisseur.UpdateInfo();
+                formAddFournisseur.ShowDialog();
                 return;
             }
-            
-            if(btnAddFournisseur.Text == "Ajouter")
+            if (e.ColumnIndex == 1)
             {
-                string siret = textBoxSiret.Text;
-                string nom = textBoxNom.Text;
-                string contact = textBoxContact.Text;
-                string adresse = textBoxAdresse.Text;
-                string libelle = comboBoxLibelle.SelectedItem.ToString();
-                DBVeloMax.AddFournisseur(siret, nom, contact, adresse, libelle);
-                Clear();
+                if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce fournisseur ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    DBVeloMax.DeleteFournisseur(dataGridViewFournisseur.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    DisplayFournisseur();
+                }
+                return;
             }
         }
     }

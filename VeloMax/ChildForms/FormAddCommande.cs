@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace VeloMax.ChildForms
 {
-    public partial class FormCommande : Form
+    public partial class FormAddCommande : Form
     {
-        public FormCommande()
+        public FormAddCommande()
         {
             InitializeComponent();
         }
 
-        private void FormCommande_Load(object sender, EventArgs e)
+  
+
+        private void btnAddFournisseur_Click(object sender, EventArgs e)
         {
 
         }

@@ -29,15 +29,15 @@ namespace VeloMax
 
         public static void AddFournisseur(string siret, string nom, string contact, string adresse, string libelle)
         {
-            string request = "INSERT INTO Fournisseur (siret, nom, contact, adresse, libelle) VALUES (@SIRET, @NOM, @CONTACT, @ADRESSE, @LIBELLE);";
+            string query = "INSERT INTO Fournisseur (siret, nom, contact, adresse, libelle) VALUES (@SIRET, @NOM, @CONTACT, @ADRESSE, @LIBELLE);";
             MySqlConnection connection = GetDBConnection();
-            MySqlCommand cmd = new MySqlCommand(request, connection);
+            MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@SIRET", MySqlDbType.VarChar).Value = siret;
             cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
             cmd.Parameters.Add("@CONTACT", MySqlDbType.VarChar).Value = contact;
             cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
-            cmd.Parameters.Add("@LIBELLE", MySqlDbType.VarChar).Value = libelle;
+            cmd.Parameters.Add("@LIBELLE", MySqlDbType.Enum).Value = libelle;
             try
             {
                 cmd.ExecuteNonQuery();
@@ -51,13 +51,13 @@ namespace VeloMax
 
         }
 
-        public static void DeleteFournisseur(int siret)
+        public static void DeleteFournisseur(string siret)
         {
-            string request = "DELETE FROM Fournisseur WHERE siret = @SIRET";
+            string query = "DELETE FROM Fournisseur WHERE siret = @SIRET";
             MySqlConnection connection = GetDBConnection();
-            MySqlCommand cmd = new MySqlCommand(request, connection);
+            MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@SIRET", MySqlDbType.Int32).Value = siret;
+            cmd.Parameters.Add("@SIRET", MySqlDbType.VarChar).Value = siret;
             try
             {
                 cmd.ExecuteNonQuery();
@@ -72,15 +72,15 @@ namespace VeloMax
 
         public static void UpdateFournisseur(string siret, string nom, string contact, string adresse, string libelle)
         {
-            string request = "UPDATE Fournisseur SET nom = @NOM, contact = @CONTACT, adresse = @ADRESSE, libelle = @LIBELLE WHERE siret = @siret;";
+            string query = "UPDATE Fournisseur SET nom = @NOM, contact = @CONTACT, adresse = @ADRESSE, libelle = @LIBELLE WHERE siret = @siret;";
             MySqlConnection connection = GetDBConnection();
-            MySqlCommand cmd = new MySqlCommand(request, connection);
+            MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@SIRET", MySqlDbType.VarChar).Value = siret;
             cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
             cmd.Parameters.Add("@CONTACT", MySqlDbType.VarChar).Value = contact;
             cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
-            cmd.Parameters.Add("@LIBELLE", MySqlDbType.VarChar).Value = libelle;
+            cmd.Parameters.Add("@LIBELLE", MySqlDbType.Enum).Value = libelle;
             try
             {
                 cmd.ExecuteNonQuery();
@@ -92,6 +92,17 @@ namespace VeloMax
             }
             connection.Close();
 
+        }
+
+        public static void DisplayAndSearch(string query, DataGridView dgv)
+        {
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            connection.Close();
         }
     }
 }
