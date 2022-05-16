@@ -1,6 +1,6 @@
 ﻿namespace VeloMax.ChildForms
 {
-    partial class FormModele
+    partial class FormAddModele
     {
         /// <summary>
         /// Required designer variable.
@@ -202,7 +202,7 @@
             this.btnAddModele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddModele.UseVisualStyleBackColor = false;
             // 
-            // FormModele
+            // FormAddModele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,8 +222,8 @@
             this.Controls.Add(this.labelPrixU);
             this.Controls.Add(this.labelNom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormModele";
-            this.Text = "FormCommande";
+            this.Name = "FormAddModele";
+            this.Text = "FormAddModele";
             this.Load += new System.EventHandler(this.FormCommande_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrixU)).EndInit();
             this.ResumeLayout(false);

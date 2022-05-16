@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnOpenAddFournisseur = new FontAwesome.Sharp.IconButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewFournisseur = new System.Windows.Forms.DataGridView();
             this.dataSiret = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,28 +43,9 @@
             this.dataLibelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnOpenAddFournisseur = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFournisseur)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnOpenAddFournisseur
-            // 
-            this.btnOpenAddFournisseur.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOpenAddFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
-            this.btnOpenAddFournisseur.FlatAppearance.BorderSize = 0;
-            this.btnOpenAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenAddFournisseur.ForeColor = System.Drawing.Color.White;
-            this.btnOpenAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnOpenAddFournisseur.IconColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnOpenAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOpenAddFournisseur.Location = new System.Drawing.Point(972, 523);
-            this.btnOpenAddFournisseur.Name = "btnOpenAddFournisseur";
-            this.btnOpenAddFournisseur.Size = new System.Drawing.Size(173, 65);
-            this.btnOpenAddFournisseur.TabIndex = 12;
-            this.btnOpenAddFournisseur.Text = "Ajouter un fournisseur";
-            this.btnOpenAddFournisseur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOpenAddFournisseur.UseVisualStyleBackColor = false;
-            this.btnOpenAddFournisseur.Click += new System.EventHandler(this.btnOpenAddFournisseur_Click);
             // 
             // dataGridViewFournisseur
             // 
@@ -102,8 +82,8 @@
             // dataSiret
             // 
             this.dataSiret.DataPropertyName = "siret";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataSiret.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataSiret.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataSiret.HeaderText = "siret";
             this.dataSiret.Name = "dataSiret";
             this.dataSiret.ReadOnly = true;
@@ -113,8 +93,8 @@
             // dataNom
             // 
             this.dataNom.DataPropertyName = "nom";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataNom.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataNom.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataNom.HeaderText = "nom";
             this.dataNom.Name = "dataNom";
             this.dataNom.ReadOnly = true;
@@ -123,8 +103,8 @@
             // dataContact
             // 
             this.dataContact.DataPropertyName = "contact";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataContact.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataContact.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataContact.HeaderText = "contact";
             this.dataContact.Name = "dataContact";
             this.dataContact.ReadOnly = true;
@@ -133,8 +113,8 @@
             // dataAdresse
             // 
             this.dataAdresse.DataPropertyName = "adresse";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataAdresse.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataAdresse.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataAdresse.HeaderText = "adresse";
             this.dataAdresse.Name = "dataAdresse";
             this.dataAdresse.ReadOnly = true;
@@ -143,8 +123,8 @@
             // dataLibelle
             // 
             this.dataLibelle.DataPropertyName = "libelle";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataLibelle.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataLibelle.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataLibelle.HeaderText = "libelle";
             this.dataLibelle.Name = "dataLibelle";
             this.dataLibelle.ReadOnly = true;
@@ -152,13 +132,13 @@
             // 
             // btnUpdate
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            this.btnUpdate.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.btnUpdate.DefaultCellStyle = dataGridViewCellStyle6;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.HeaderText = "";
             this.btnUpdate.Name = "btnUpdate";
@@ -169,13 +149,13 @@
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle7;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.HeaderText = "";
             this.btnDelete.Name = "btnDelete";
@@ -183,6 +163,26 @@
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseColumnTextForButtonValue = true;
             this.btnDelete.Width = 150;
+            // 
+            // btnOpenAddFournisseur
+            // 
+            this.btnOpenAddFournisseur.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenAddFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
+            this.btnOpenAddFournisseur.FlatAppearance.BorderSize = 0;
+            this.btnOpenAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenAddFournisseur.ForeColor = System.Drawing.Color.White;
+            this.btnOpenAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnOpenAddFournisseur.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnOpenAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOpenAddFournisseur.Location = new System.Drawing.Point(972, 523);
+            this.btnOpenAddFournisseur.Name = "btnOpenAddFournisseur";
+            this.btnOpenAddFournisseur.Size = new System.Drawing.Size(173, 65);
+            this.btnOpenAddFournisseur.TabIndex = 12;
+            this.btnOpenAddFournisseur.Text = "Ajouter un fournisseur";
+            this.btnOpenAddFournisseur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpenAddFournisseur.UseVisualStyleBackColor = false;
+            this.btnOpenAddFournisseur.Click += new System.EventHandler(this.btnOpenAddFournisseur_Click);
             // 
             // FormFournisseur
             // 

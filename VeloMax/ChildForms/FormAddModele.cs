@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VeloMax.ChildForms
 {
-    public partial class FormModele : Form
+    public partial class FormAddModele : Form
     {
-        public FormModele()
+        public FormAddModele()
         {
             InitializeComponent();
         }

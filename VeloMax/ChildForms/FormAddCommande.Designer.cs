@@ -40,7 +40,7 @@
             this.comboBoxModele = new System.Windows.Forms.ComboBox();
             this.datePickerDateC = new System.Windows.Forms.DateTimePicker();
             this.datePickerDateL = new System.Windows.Forms.DateTimePicker();
-            this.btnAddFournisseur = new FontAwesome.Sharp.IconButton();
+            this.btnAddCommande = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // comboBoxClient
@@ -175,25 +175,25 @@
             this.datePickerDateL.Size = new System.Drawing.Size(231, 26);
             this.datePickerDateL.TabIndex = 29;
             // 
-            // btnAddFournisseur
+            // btnAddCommande
             // 
-            this.btnAddFournisseur.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
-            this.btnAddFournisseur.FlatAppearance.BorderSize = 0;
-            this.btnAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFournisseur.ForeColor = System.Drawing.Color.White;
-            this.btnAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddFournisseur.IconColor = System.Drawing.Color.White;
-            this.btnAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddFournisseur.Location = new System.Drawing.Point(309, 593);
-            this.btnAddFournisseur.Name = "btnAddFournisseur";
-            this.btnAddFournisseur.Size = new System.Drawing.Size(173, 65);
-            this.btnAddFournisseur.TabIndex = 22;
-            this.btnAddFournisseur.Text = "Ajouter";
-            this.btnAddFournisseur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddFournisseur.UseVisualStyleBackColor = false;
-            this.btnAddFournisseur.Click += new System.EventHandler(this.btnAddFournisseur_Click);
+            this.btnAddCommande.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddCommande.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
+            this.btnAddCommande.FlatAppearance.BorderSize = 0;
+            this.btnAddCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCommande.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCommande.ForeColor = System.Drawing.Color.White;
+            this.btnAddCommande.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddCommande.IconColor = System.Drawing.Color.White;
+            this.btnAddCommande.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddCommande.Location = new System.Drawing.Point(309, 593);
+            this.btnAddCommande.Name = "btnAddCommande";
+            this.btnAddCommande.Size = new System.Drawing.Size(173, 65);
+            this.btnAddCommande.TabIndex = 22;
+            this.btnAddCommande.Text = "Ajouter";
+            this.btnAddCommande.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddCommande.UseVisualStyleBackColor = false;
+            this.btnAddCommande.Click += new System.EventHandler(this.btnAddCommande_Click);
             // 
             // FormAddCommande
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.labelModele);
             this.Controls.Add(this.comboBoxPiece);
             this.Controls.Add(this.labelPiece);
-            this.Controls.Add(this.btnAddFournisseur);
+            this.Controls.Add(this.btnAddCommande);
             this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.textBoxContact);
             this.Controls.Add(this.labelClient);
@@ -224,7 +224,7 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton btnAddFournisseur;
+        private FontAwesome.Sharp.IconButton btnAddCommande;
         private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.TextBox textBoxContact;
         private System.Windows.Forms.Label labelClient;

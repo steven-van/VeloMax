@@ -19,7 +19,7 @@ namespace VeloMax.ChildForms
 
   
 
-        private void btnAddFournisseur_Click(object sender, EventArgs e)
+        private void btnAddCommande_Click(object sender, EventArgs e)
         {
 
         }

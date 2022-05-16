@@ -104,14 +104,14 @@ namespace VeloMax
         private void btnCommande_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenSubForm(new ChildForms.FormCommande());
+            OpenSubForm(new ChildForms.FormAddCommande());
 
         }
 
         private void btnModele_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenSubForm(new ChildForms.FormModele());
+            OpenSubForm(new ChildForms.FormAddModele());
         }
 
         private void btnPiece_Click(object sender, EventArgs e)

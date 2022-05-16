@@ -192,7 +192,7 @@
             this.Controls.Add(this.labelSiret);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAddFournisseur";
-            this.Text = "FormStock";
+            this.Text = "FormAddFournisseur";
             this.ResumeLayout(false);
             this.PerformLayout();
 

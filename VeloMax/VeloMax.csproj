@@ -105,11 +105,11 @@
     <Compile Include="ChildForms\FormClient.Designer.cs">
       <DependentUpon>FormClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\FormCommande.cs">
+    <Compile Include="ChildForms\FormAddCommande.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\FormCommande.Designer.cs">
-      <DependentUpon>FormCommande.cs</DependentUpon>
+    <Compile Include="ChildForms\FormAddCommande.Designer.cs">
+      <DependentUpon>FormAddCommande.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\FormFournisseur.cs">
       <SubType>Form</SubType>
@@ -117,11 +117,17 @@
     <Compile Include="ChildForms\FormFournisseur.Designer.cs">
       <DependentUpon>FormFournisseur.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\FormModele.cs">
+    <Compile Include="ChildForms\FormAddModele.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\FormModele.Designer.cs">
-      <DependentUpon>FormModele.cs</DependentUpon>
+    <Compile Include="ChildForms\FormAddModele.Designer.cs">
+      <DependentUpon>FormAddModele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormAddPiece.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormAddPiece.Designer.cs">
+      <DependentUpon>FormAddPiece.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\FormPiece.cs">
       <SubType>Form</SubType>
@@ -159,14 +165,17 @@
     <EmbeddedResource Include="ChildForms\FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\FormCommande.resx">
-      <DependentUpon>FormCommande.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\FormAddCommande.resx">
+      <DependentUpon>FormAddCommande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormFournisseur.resx">
       <DependentUpon>FormFournisseur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\FormModele.resx">
-      <DependentUpon>FormModele.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\FormAddModele.resx">
+      <DependentUpon>FormAddModele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormAddPiece.resx">
+      <DependentUpon>FormAddPiece.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormPiece.resx">
       <DependentUpon>FormPiece.cs</DependentUpon>

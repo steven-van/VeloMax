@@ -212,7 +212,7 @@
             this.btnAddPiece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPiece.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPiece.ForeColor = System.Drawing.Color.White;
-            this.btnAddPiece.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddPiece.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
             this.btnAddPiece.IconColor = System.Drawing.Color.White;
             this.btnAddPiece.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddPiece.Location = new System.Drawing.Point(411, 645);
@@ -224,7 +224,7 @@
             this.btnAddPiece.UseVisualStyleBackColor = false;
             this.btnAddPiece.Click += new System.EventHandler(this.btnAddPiece_Click);
             // 
-            // FormPiece
+            // FormAddPiece
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,7 +246,7 @@
             this.Controls.Add(this.labelDelaiA);
             this.Controls.Add(this.labelDesc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormPiece";
+            this.Name = "FormAddPiece";
             this.Text = "FormAddPiece";
             ((System.ComponentModel.ISupportInitialize)(this.numDelaiA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
