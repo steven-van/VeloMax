@@ -111,7 +111,7 @@ namespace VeloMax
         private void btnModele_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenSubForm(new ChildForms.FormAddModele());
+            OpenSubForm(new ChildForms.FormModele());
         }
 
         private void btnPiece_Click(object sender, EventArgs e)

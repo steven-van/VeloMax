@@ -40,7 +40,7 @@ namespace VeloMax.ChildForms
 
         private void dataGridViewFournisseur_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 0)
+            if(e.ColumnIndex == 0) //Modifier
             {
                 formAddFournisseur.ClearInputs();
                 formAddFournisseur.siret = dataGridViewFournisseur.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -52,7 +52,7 @@ namespace VeloMax.ChildForms
                 formAddFournisseur.ShowDialog();
                 return;
             }
-            if (e.ColumnIndex == 1)
+            if (e.ColumnIndex == 1) //Supprimer
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce fournisseur ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
@@ -62,5 +62,6 @@ namespace VeloMax.ChildForms
                 return;
             }
         }
+
     }
 }

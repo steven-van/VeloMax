@@ -72,7 +72,7 @@ namespace VeloMax
 
         public static void UpdateFournisseur(string siret, string nom, string contact, string adresse, string libelle)
         {
-            string query = "UPDATE Fournisseur SET nom = @NOM, contact = @CONTACT, adresse = @ADRESSE, libelle = @LIBELLE WHERE siret = @siret;";
+            string query = "UPDATE Fournisseur SET nom = @NOM, contact = @CONTACT, adresse = @ADRESSE, libelle = @LIBELLE WHERE siret = @SIRET;";
             MySqlConnection connection = GetDBConnection();
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;

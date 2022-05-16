@@ -12,10 +12,10 @@ namespace VeloMax.ChildForms
 {
     public partial class FormAddPiece : Form
     {
-        FormPiece formParent;
-        string desc, categorie;
-        DateTime dateI, dateD;
-        int prixU, stock;
+        private readonly FormPiece formParent;
+        public string desc, categorie;
+        public DateTime dateI, dateD;
+        public int prixU, stock, delaiA;
 
         public FormAddPiece(FormPiece parent)
         {
@@ -40,7 +40,8 @@ namespace VeloMax.ChildForms
             numStock.Value = stock;
             datePickerDateD.Value = dateD;
             datePickerDateI.Value = dateI;
-        
+            comboBoxCategorie.Text = categorie;
+            numDelaiA.Value = delaiA;
 
         }
 
@@ -52,7 +53,65 @@ namespace VeloMax.ChildForms
 
         private void btnAddPiece_Click(object sender, EventArgs e)
         {
+            if(textBoxDesc.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("Veuillez renseigner une description");
+                return;
+            }
+            if(numPrixU.Value == 0)
+            {
+                MessageBox.Show("Veuillez renseigner un prix unitaire");
+                return;
+            }
+            if(numStock.Value == 0)
+            {
+                MessageBox.Show("Veuillez renseigner un stock");
+                return;
 
+            }
+            if (numDelaiA.Value == 0)
+            {
+                MessageBox.Show("Veuillez renseigner un délai d'approvisionnements");
+                return;
+
+            }
+            if (datePickerDateD.Value < datePickerDateI.Value)
+            {
+                MessageBox.Show("La date de discontinuation ne peut pas être antérieure à la date d'introduction");
+                return;
+            }
+            if (comboBoxCategorie.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez renseigner une catégorie");
+            }
+
+            if (btnAddPiece.Text == "Ajouter")
+            {
+                string desc = textBoxDesc.Text.Trim();
+                int prixU = Convert.ToInt32(numPrixU.Value);
+                int stock = Convert.ToInt32(numStock.Value);
+                int delaiA = Convert.ToInt32(numDelaiA.Value);
+                DateTime dateI = datePickerDateI.Value;
+                DateTime dateD = datePickerDateD.Value;
+                string categorie = comboBoxCategorie.SelectedItem.ToString();
+                //DBVeloMax.AddPiece();
+                ClearInputs();
+            }
+
+            if (btnAddPiece.Text == "Modifier")
+            {
+                string desc = textBoxDesc.Text.Trim();
+                int prixU = Convert.ToInt32(numPrixU.Value);
+                int stock = Convert.ToInt32(numStock.Value);
+                int delaiA = Convert.ToInt32(numDelaiA.Value);
+                DateTime dateI = datePickerDateI.Value;
+                DateTime dateD = datePickerDateD.Value;
+                string categorie = comboBoxCategorie.SelectedItem.ToString();
+                //DBVeloMax.UpdatePiece();
+                ClearInputs();
+                this.Close();
+            }
+            formParent.DisplayPiece();
         }
     }
 }

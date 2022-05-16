@@ -66,7 +66,7 @@
             this.labelDelaiA.AutoSize = true;
             this.labelDelaiA.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDelaiA.ForeColor = System.Drawing.Color.White;
-            this.labelDelaiA.Location = new System.Drawing.Point(45, 473);
+            this.labelDelaiA.Location = new System.Drawing.Point(45, 549);
             this.labelDelaiA.Name = "labelDelaiA";
             this.labelDelaiA.Size = new System.Drawing.Size(286, 28);
             this.labelDelaiA.TabIndex = 3;
@@ -78,7 +78,7 @@
             this.labelDateD.AutoSize = true;
             this.labelDateD.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateD.ForeColor = System.Drawing.Color.White;
-            this.labelDateD.Location = new System.Drawing.Point(75, 390);
+            this.labelDateD.Location = new System.Drawing.Point(75, 466);
             this.labelDateD.Name = "labelDateD";
             this.labelDateD.Size = new System.Drawing.Size(256, 28);
             this.labelDateD.TabIndex = 4;
@@ -90,7 +90,7 @@
             this.labelStock.AutoSize = true;
             this.labelStock.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStock.ForeColor = System.Drawing.Color.White;
-            this.labelStock.Location = new System.Drawing.Point(281, 231);
+            this.labelStock.Location = new System.Drawing.Point(281, 307);
             this.labelStock.Name = "labelStock";
             this.labelStock.Size = new System.Drawing.Size(68, 28);
             this.labelStock.TabIndex = 5;
@@ -102,7 +102,7 @@
             this.labelDateI.AutoSize = true;
             this.labelDateI.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateI.ForeColor = System.Drawing.Color.White;
-            this.labelDateI.Location = new System.Drawing.Point(121, 313);
+            this.labelDateI.Location = new System.Drawing.Point(121, 389);
             this.labelDateI.Name = "labelDateI";
             this.labelDateI.Size = new System.Drawing.Size(210, 28);
             this.labelDateI.TabIndex = 6;
@@ -114,7 +114,7 @@
             this.labelPrixU.AutoSize = true;
             this.labelPrixU.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrixU.ForeColor = System.Drawing.Color.White;
-            this.labelPrixU.Location = new System.Drawing.Point(214, 148);
+            this.labelPrixU.Location = new System.Drawing.Point(214, 224);
             this.labelPrixU.Name = "labelPrixU";
             this.labelPrixU.Size = new System.Drawing.Size(135, 28);
             this.labelPrixU.TabIndex = 7;
@@ -135,7 +135,7 @@
             this.labelCategorie.AutoSize = true;
             this.labelCategorie.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategorie.ForeColor = System.Drawing.Color.White;
-            this.labelCategorie.Location = new System.Drawing.Point(221, 549);
+            this.labelCategorie.Location = new System.Drawing.Point(221, 149);
             this.labelCategorie.Name = "labelCategorie";
             this.labelCategorie.Size = new System.Drawing.Size(110, 28);
             this.labelCategorie.TabIndex = 16;
@@ -159,7 +159,7 @@
             "Pédalie",
             "Ordinateur",
             "Panier"});
-            this.comboBoxCategorie.Location = new System.Drawing.Point(390, 549);
+            this.comboBoxCategorie.Location = new System.Drawing.Point(390, 149);
             this.comboBoxCategorie.Name = "comboBoxCategorie";
             this.comboBoxCategorie.Size = new System.Drawing.Size(231, 28);
             this.comboBoxCategorie.TabIndex = 17;
@@ -167,7 +167,7 @@
             // datePickerDateI
             // 
             this.datePickerDateI.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.datePickerDateI.Location = new System.Drawing.Point(390, 315);
+            this.datePickerDateI.Location = new System.Drawing.Point(390, 391);
             this.datePickerDateI.Name = "datePickerDateI";
             this.datePickerDateI.Size = new System.Drawing.Size(231, 26);
             this.datePickerDateI.TabIndex = 28;
@@ -175,7 +175,7 @@
             // datePickerDateD
             // 
             this.datePickerDateD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.datePickerDateD.Location = new System.Drawing.Point(390, 390);
+            this.datePickerDateD.Location = new System.Drawing.Point(390, 466);
             this.datePickerDateD.Name = "datePickerDateD";
             this.datePickerDateD.Size = new System.Drawing.Size(231, 26);
             this.datePickerDateD.TabIndex = 29;
@@ -183,7 +183,7 @@
             // numDelaiA
             // 
             this.numDelaiA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numDelaiA.Location = new System.Drawing.Point(390, 478);
+            this.numDelaiA.Location = new System.Drawing.Point(390, 554);
             this.numDelaiA.Name = "numDelaiA";
             this.numDelaiA.Size = new System.Drawing.Size(231, 26);
             this.numDelaiA.TabIndex = 30;
@@ -191,7 +191,12 @@
             // numStock
             // 
             this.numStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numStock.Location = new System.Drawing.Point(390, 231);
+            this.numStock.Location = new System.Drawing.Point(390, 307);
+            this.numStock.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numStock.Name = "numStock";
             this.numStock.Size = new System.Drawing.Size(231, 26);
             this.numStock.TabIndex = 31;
@@ -199,7 +204,12 @@
             // numPrixU
             // 
             this.numPrixU.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numPrixU.Location = new System.Drawing.Point(390, 153);
+            this.numPrixU.Location = new System.Drawing.Point(390, 229);
+            this.numPrixU.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numPrixU.Name = "numPrixU";
             this.numPrixU.Size = new System.Drawing.Size(231, 26);
             this.numPrixU.TabIndex = 32;
