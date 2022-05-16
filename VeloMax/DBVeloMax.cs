@@ -27,6 +27,8 @@ namespace VeloMax
             return connection;
         }
 
+        #region Fournisseur
+
         public static void AddFournisseur(string siret, string nom, string contact, string adresse, string libelle)
         {
             string query = "INSERT INTO Fournisseur (siret, nom, contact, adresse, libelle) VALUES (@SIRET, @NOM, @CONTACT, @ADRESSE, @LIBELLE);";
@@ -91,8 +93,350 @@ namespace VeloMax
                 MessageBox.Show("Erreur, le fournisseur n'a pas été mis à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
+        }
+
+        #endregion
+
+
+        #region Piece
+
+        public static void AddPiece(string description, string categorie, double prixU, int stock, DateTime dateI, DateTime dateD, int delaiA)
+        {
+            string query = "INSERT INTO Piece (description, categorie, prixU, stock, dateI, dateD, delaiA) VALUES (@DESCRIPTION, @CATEGORIE, @PRIXU, @STOCK, @DATEI, @DATED, @DELAIA);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@DESCRIPTION", MySqlDbType.VarChar).Value = description;
+            cmd.Parameters.Add("@CATEGORIE", MySqlDbType.Enum).Value = categorie;
+            cmd.Parameters.Add("@PRIXU", MySqlDbType.Decimal).Value = prixU;
+            cmd.Parameters.Add("@STOCK", MySqlDbType.Int32).Value = stock;
+            cmd.Parameters.Add("@DATEI", MySqlDbType.Date).Value = dateI;
+            cmd.Parameters.Add("@DATED", MySqlDbType.Date).Value = dateD;
+            cmd.Parameters.Add("@DELAIA", MySqlDbType.Int32).Value = delaiA;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pièce ajoutée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la pièce n'a pas été ajoutée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
 
         }
+
+        public static void DeletePiece(int idPiece)
+        {
+            string query = "DELETE FROM Piece WHERE idPiece = @IDPIECE";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDPIECE", MySqlDbType.Int32).Value = idPiece;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pièce supprimée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la pièce n'a pas été supprimée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void UpdatePiece(int idPiece, string description, string categorie, double prixU, int stock, DateTime dateI, DateTime dateD, int delaiA)
+        {
+            string query = "UPDATE Piece SET description = @DESCRIPTION, categorie = @CATEGORIE, prixU = @PRIXU, stock = @STOCK, dateI = @DATEI, dateD = @DATED, delaiA = @DELAIA WHERE idPiece = @IDPIECE;";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDPIECE", MySqlDbType.Int32).Value = idPiece;
+            cmd.Parameters.Add("@DESCRIPTION", MySqlDbType.VarChar).Value = description;
+            cmd.Parameters.Add("@CATEGORIE", MySqlDbType.Enum).Value = categorie;
+            cmd.Parameters.Add("@PRIXU", MySqlDbType.Decimal).Value = prixU;
+            cmd.Parameters.Add("@STOCK", MySqlDbType.Int32).Value = stock;
+            cmd.Parameters.Add("@DATEI", MySqlDbType.Date).Value = dateI;
+            cmd.Parameters.Add("@DATED", MySqlDbType.Date).Value = dateD;
+            cmd.Parameters.Add("@DELAIA", MySqlDbType.Int32).Value = delaiA;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pièce mise à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la pièce n'a pas été mise à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
+        #region Modele
+
+        public static void AddModele(string nom, string grandeur, double prixU, string ligneP, DateTime dateI, DateTime dateD)
+        {
+            string query = "INSERT INTO Modele (nom, grandeur, prixU, ligneP, dateI, dateD) VALUES (@NOM, @GRANDEUR, @PRIXU, @LIGNEP, @DATEI, @DATED);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
+            cmd.Parameters.Add("@GRANDEUR", MySqlDbType.VarChar).Value = grandeur;
+            cmd.Parameters.Add("@PRIXU", MySqlDbType.Decimal).Value = prixU;
+            cmd.Parameters.Add("@LIGNEP", MySqlDbType.VarChar).Value = ligneP;
+            cmd.Parameters.Add("@DATEI", MySqlDbType.Date).Value = dateI;
+            cmd.Parameters.Add("@DATED", MySqlDbType.Date).Value = dateD;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Modèle ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le modèle n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        public static void DeleteModele(int idModele)
+        {
+            string query = "DELETE FROM Modele WHERE idModele = @IDMODELE";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDMODELE", MySqlDbType.Int32).Value = idModele;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Modèle supprimé avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le modèle n'a pas été supprimé \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void UpdateModele(int idModele, string nom, string grandeur, double prixU, string ligneP, DateTime dateI, DateTime dateD)
+        {
+            string query = "UPDATE Modele SET nom = @NOM, grandeur = @GRANDEUR, prixU = @PRIXU, ligneP = @LIGNEP, dateI = @DATEI, dateD = @DATED WHERE idModele = @IDMODELE;";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDMODELE", MySqlDbType.Int32).Value = idModele;
+            cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
+            cmd.Parameters.Add("@GRANDEUR", MySqlDbType.VarChar).Value = grandeur;
+            cmd.Parameters.Add("@PRIXU", MySqlDbType.Decimal).Value = prixU;
+            cmd.Parameters.Add("@LIGNEP", MySqlDbType.VarChar).Value = ligneP;
+            cmd.Parameters.Add("@DATEI", MySqlDbType.Date).Value = dateI;
+            cmd.Parameters.Add("@DATED", MySqlDbType.Date).Value = dateD;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Modèle mis à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le modèle n'a pas été mis à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
+        #region Client
+
+        public static void AddClient(string type, string adresse, string courriel, string telephone)
+        {
+            string query = "INSERT INTO Client (type, adresse, courriel, telephone) VALUES (@TYPE, @ADRESSE, @COURRIEL, @TELEPHONE);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@TYPE", MySqlDbType.VarChar).Value = type;
+            cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
+            cmd.Parameters.Add("@COURRIEL", MySqlDbType.VarChar).Value = courriel;
+            cmd.Parameters.Add("@TELEPHONE", MySqlDbType.VarChar).Value = telephone;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Client ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le client n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void AddClientIndividu(int idClient, string nom, string prenom)
+        {
+            string query = "INSERT INTO Individu (idClient, nom, prenom) VALUES (@IDCLIENT, @NOM, @PRENOM);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
+            cmd.Parameters.Add("@PRENOM", MySqlDbType.VarChar).Value = prenom;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Individu ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'individu n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void AddClientBoutique(int idClient, string nom, string contact, int remise, int volumeA)
+        {
+            string query = "INSERT INTO Boutique (idClient, nom, contact, remise, volumeA) VALUES (@IDCLIENT, @NOM, @CONTACT, @REMISE, @VOLUMEA);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
+            cmd.Parameters.Add("@CONTACT", MySqlDbType.VarChar).Value = contact;
+            cmd.Parameters.Add("@REMISE", MySqlDbType.Int32).Value = remise;
+            cmd.Parameters.Add("@VOLUMEA", MySqlDbType.Int32).Value = volumeA;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Boutique ajoutée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la boutique n'a pas été ajoutée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+
+        public static void DeleteClient(int idClient)
+        {
+            string query = "DELETE FROM Client WHERE idClient = @IDCLIENT";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Client supprimé avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le client n'a pas été supprimé \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+
+        public static void UpdateClient(int idClient, string type, string adresse, string courriel, string telephone)
+        {
+            string query = "UPDATE Client SET type = @TYPE, adresse = @ADRESSE, courriel = @COURRIEL, telephone = @TELEPHONE WHERE idClient = @IDCLIENT;";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@TYPE", MySqlDbType.VarChar).Value = type;
+            cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
+            cmd.Parameters.Add("@COURRIEL", MySqlDbType.VarChar).Value = courriel;
+            cmd.Parameters.Add("@TELEPHONE", MySqlDbType.VarChar).Value = telephone;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Client mis à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le client n'a pas été mis à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
+        #region Commandes
+
+        public static void AddCommande(DateTime dateC, string adresseL, DateTime dateL, int idClient)
+        {
+            string query = "INSERT INTO Commande (dateC, adresseL, dateL, idClient) VALUES (@DATEC, @ADRESSEL, @DATEL, @IDCLIENT);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@DATEC", MySqlDbType.Date).Value = dateC;
+            cmd.Parameters.Add("@ADRESSEL", MySqlDbType.VarChar).Value = adresseL;
+            cmd.Parameters.Add("@DATEL", MySqlDbType.Date).Value = dateL;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Commande ajoutée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la commande n'a pas été ajoutée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        public static void DeleteCommande(int idCommande)
+        {
+            string query = "DELETE FROM Commande WHERE idCommande = @IDCOMMANDE";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCOMMANDE", MySqlDbType.Int32).Value = idCommande;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Commande supprimée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la commande n'a pas été supprimée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void UpdateCommande(int idCommande, DateTime dateC, string adresseL, DateTime dateL, int idClient)
+        {
+            string query = "UPDATE Commande SET dateC = @DATEC, adresseL = @ADRESSEL, dateL = @DATEL, idClient = @IDCLIENT WHERE idCommande = @IDCOMMANDE;";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCOMMANDE", MySqlDbType.Int32).Value = idCommande;
+            cmd.Parameters.Add("@DATEC", MySqlDbType.Date).Value = dateC;
+            cmd.Parameters.Add("@ADRESSEL", MySqlDbType.VarChar).Value = adresseL;
+            cmd.Parameters.Add("@DATEL", MySqlDbType.Date).Value = dateL;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Commande mise à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la commande n'a pas été mise à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
 
         public static void DisplayAndSearch(string query, DataGridView dgv)
         {
