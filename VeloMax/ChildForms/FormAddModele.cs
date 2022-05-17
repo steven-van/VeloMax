@@ -13,8 +13,9 @@ namespace VeloMax.ChildForms
     public partial class FormAddModele : Form
     {
         private readonly FormModele formParent;
+        public int idModele;
         public string nom, grandeur, ligneP;
-        public int prixU;
+        public double prixU;
         public DateTime dateI, dateD;
 
         public FormAddModele(FormModele parent)
@@ -44,7 +45,7 @@ namespace VeloMax.ChildForms
             btnAddModele.BackColor = Color.FromArgb(249, 180, 45);
             textBoxNom.Text = nom;
             comboBoxGrandeur.Text = grandeur;
-            numPrixU.Value = prixU;
+            numPrixU.Value = Convert.ToDecimal(prixU);
             comboBoxLigneP.Text = ligneP;
             datePickerDateD.Value = dateD;
             datePickerDateI.Value = dateI;
@@ -70,7 +71,7 @@ namespace VeloMax.ChildForms
                 MessageBox.Show("Veuillez choisir une grandeur");
                 return;
             }
-            if (numPrixU.Value == 0)
+            if (numPrixU.Value <= 0)
             {
                 MessageBox.Show("Veuillez entrer un prix unitaire");
                 return;
@@ -84,29 +85,30 @@ namespace VeloMax.ChildForms
 
             if (datePickerDateD.Value < datePickerDateI.Value)
             {
-                MessageBox.Show("La date de discontinuation ne doit pas être inférieur à la date d'introduction");
+                MessageBox.Show("La date de discontinuation ne doit pas être antérieure à la date d'introduction");
+                return;
             }
 
             if (btnAddModele.Text == "Ajouter")
             {
                 string nom = textBoxNom.Text.Trim();
                 string grandeur = comboBoxGrandeur.SelectedItem.ToString();
-                int prixU = Convert.ToInt32(numPrixU.Value);
+                double prixU = Convert.ToDouble(numPrixU.Value);
                 string ligneP = comboBoxLigneP.SelectedItem.ToString();
                 DateTime dateI = datePickerDateI.Value;
                 DateTime dateD = datePickerDateD.Value;
-                //DBVeloMax.AddModele();
+                DBVeloMax.AddModele(nom,grandeur,prixU,ligneP,dateI,dateD);
                 ClearInputs();
             }
             if (btnAddModele.Text == "Modifier")
             {
                 string nom = textBoxNom.Text.Trim();
                 string grandeur = comboBoxGrandeur.SelectedItem.ToString();
-                int prixU = Convert.ToInt32(numPrixU.Value);
+                double prixU = Convert.ToDouble(numPrixU.Value);
                 string ligneP = comboBoxLigneP.SelectedItem.ToString();
                 DateTime dateI = datePickerDateI.Value;
                 DateTime dateD = datePickerDateD.Value;
-                //DBVeloMax.UpdateModele();
+                DBVeloMax.UpdateModele(idModele, nom, grandeur, prixU, ligneP,dateI, dateD);
                 ClearInputs();
                 this.Close();
             }

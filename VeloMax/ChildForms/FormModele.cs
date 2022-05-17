@@ -42,6 +42,7 @@ namespace VeloMax.ChildForms
             if (e.ColumnIndex == 0) //Modifier
             {
                 formAddModele.ClearInputs();
+                formAddModele.idModele = Convert.ToInt32(dataGridViewModele.Rows[e.RowIndex].Cells[2].Value);
                 formAddModele.nom = dataGridViewModele.Rows[e.RowIndex].Cells[3].Value.ToString();
                 formAddModele.grandeur = dataGridViewModele.Rows[e.RowIndex].Cells[4].Value.ToString();
                 formAddModele.prixU = Convert.ToInt32(dataGridViewModele.Rows[e.RowIndex].Cells[5].Value);
@@ -56,7 +57,7 @@ namespace VeloMax.ChildForms
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce modèle ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    //DBVeloMax.DeleteModele(Convert.ToInt32(dataGridViewModele.Rows[e.RowIndex].Cells[2].Value));
+                    DBVeloMax.DeleteModele(Convert.ToInt32(dataGridViewModele.Rows[e.RowIndex].Cells[2].Value));
                     DisplayModele();
                 }
                 return;

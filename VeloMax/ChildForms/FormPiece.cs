@@ -49,9 +49,10 @@ namespace VeloMax.ChildForms
             if (e.ColumnIndex == 0) //Modifier
             {
                 formAddPiece.ClearInputs();
+                formAddPiece.idPiece = Convert.ToInt32(dataGridViewPiece.Rows[e.RowIndex].Cells[2].Value);
                 formAddPiece.desc = dataGridViewPiece.Rows[e.RowIndex].Cells[3].Value.ToString();
                 formAddPiece.categorie = dataGridViewPiece.Rows[e.RowIndex].Cells[4].Value.ToString();
-                formAddPiece.prixU = Convert.ToInt32(dataGridViewPiece.Rows[e.RowIndex].Cells[5].Value);
+                formAddPiece.prixU = Convert.ToDouble(dataGridViewPiece.Rows[e.RowIndex].Cells[5].Value);
                 formAddPiece.stock = Convert.ToInt32(dataGridViewPiece.Rows[e.RowIndex].Cells[6].Value);
                 formAddPiece.dateI = dataGridViewPiece.Rows[e.RowIndex].Cells[7].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewPiece.Rows[e.RowIndex].Cells[7].Value); 
                 formAddPiece.dateD = dataGridViewPiece.Rows[e.RowIndex].Cells[8].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewPiece.Rows[e.RowIndex].Cells[8].Value);
@@ -64,7 +65,7 @@ namespace VeloMax.ChildForms
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer cette pièce ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    //DBVeloMax.DeletePiece(Convert.ToInt32(dataGridViewPiece.Rows[e.RowIndex].Cells[2].Value));
+                    DBVeloMax.DeletePiece(Convert.ToInt32(dataGridViewPiece.Rows[e.RowIndex].Cells[2].Value));
                     DisplayPiece();
                 }
                 return;

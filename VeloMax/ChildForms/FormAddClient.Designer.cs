@@ -42,19 +42,19 @@
             this.textBoxNomI = new System.Windows.Forms.TextBox();
             this.labelNomI = new System.Windows.Forms.Label();
             this.groupBoxBoutique = new System.Windows.Forms.GroupBox();
-            this.textBoxNomB = new System.Windows.Forms.TextBox();
-            this.labelNomB = new System.Windows.Forms.Label();
-            this.textBoxContact = new System.Windows.Forms.TextBox();
-            this.labelContact = new System.Windows.Forms.Label();
-            this.labelVolumeA = new System.Windows.Forms.Label();
-            this.numVolumeA = new System.Windows.Forms.NumericUpDown();
             this.numRemise = new System.Windows.Forms.NumericUpDown();
             this.labelRemise = new System.Windows.Forms.Label();
+            this.numVolumeA = new System.Windows.Forms.NumericUpDown();
+            this.labelVolumeA = new System.Windows.Forms.Label();
+            this.textBoxContact = new System.Windows.Forms.TextBox();
+            this.textBoxNomB = new System.Windows.Forms.TextBox();
+            this.labelContact = new System.Windows.Forms.Label();
+            this.labelNomB = new System.Windows.Forms.Label();
             this.btnAddClient = new FontAwesome.Sharp.IconButton();
             this.groupBoxIndividu.SuspendLayout();
             this.groupBoxBoutique.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVolumeA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numVolumeA)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxType
@@ -87,10 +87,11 @@
             // 
             this.textBoxTelephone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTelephone.Location = new System.Drawing.Point(294, 489);
-            this.textBoxTelephone.MaxLength = 20;
+            this.textBoxTelephone.MaxLength = 10;
             this.textBoxTelephone.Name = "textBoxTelephone";
             this.textBoxTelephone.Size = new System.Drawing.Size(231, 26);
             this.textBoxTelephone.TabIndex = 21;
+            this.textBoxTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelephone_KeyPress);
             // 
             // labelTel
             // 
@@ -108,7 +109,7 @@
             // 
             this.textBoxCourriel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCourriel.Location = new System.Drawing.Point(294, 394);
-            this.textBoxCourriel.MaxLength = 20;
+            this.textBoxCourriel.MaxLength = 30;
             this.textBoxCourriel.Name = "textBoxCourriel";
             this.textBoxCourriel.Size = new System.Drawing.Size(231, 26);
             this.textBoxCourriel.TabIndex = 23;
@@ -129,7 +130,7 @@
             // 
             this.textBoxAdresse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxAdresse.Location = new System.Drawing.Point(294, 295);
-            this.textBoxAdresse.MaxLength = 20;
+            this.textBoxAdresse.MaxLength = 100;
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(231, 26);
             this.textBoxAdresse.TabIndex = 25;
@@ -148,6 +149,7 @@
             // 
             // groupBoxIndividu
             // 
+            this.groupBoxIndividu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxIndividu.Controls.Add(this.textBoxPrenom);
             this.groupBoxIndividu.Controls.Add(this.labelPrenom);
             this.groupBoxIndividu.Controls.Add(this.textBoxNomI);
@@ -205,6 +207,7 @@
             // 
             // groupBoxBoutique
             // 
+            this.groupBoxBoutique.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxBoutique.Controls.Add(this.numRemise);
             this.groupBoxBoutique.Controls.Add(this.labelRemise);
             this.groupBoxBoutique.Controls.Add(this.numVolumeA);
@@ -221,73 +224,6 @@
             this.groupBoxBoutique.TabIndex = 27;
             this.groupBoxBoutique.TabStop = false;
             this.groupBoxBoutique.Text = "Boutique";
-            // 
-            // textBoxNomB
-            // 
-            this.textBoxNomB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxNomB.Location = new System.Drawing.Point(332, 71);
-            this.textBoxNomB.MaxLength = 20;
-            this.textBoxNomB.Name = "textBoxNomB";
-            this.textBoxNomB.Size = new System.Drawing.Size(231, 26);
-            this.textBoxNomB.TabIndex = 29;
-            // 
-            // labelNomB
-            // 
-            this.labelNomB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelNomB.AutoSize = true;
-            this.labelNomB.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomB.ForeColor = System.Drawing.Color.White;
-            this.labelNomB.Location = new System.Drawing.Point(93, 67);
-            this.labelNomB.Name = "labelNomB";
-            this.labelNomB.Size = new System.Drawing.Size(212, 28);
-            this.labelNomB.TabIndex = 28;
-            this.labelNomB.Text = "Nom de la boutique";
-            // 
-            // textBoxContact
-            // 
-            this.textBoxContact.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxContact.Location = new System.Drawing.Point(332, 139);
-            this.textBoxContact.MaxLength = 20;
-            this.textBoxContact.Name = "textBoxContact";
-            this.textBoxContact.Size = new System.Drawing.Size(231, 26);
-            this.textBoxContact.TabIndex = 31;
-            // 
-            // labelContact
-            // 
-            this.labelContact.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelContact.AutoSize = true;
-            this.labelContact.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContact.ForeColor = System.Drawing.Color.White;
-            this.labelContact.Location = new System.Drawing.Point(213, 137);
-            this.labelContact.Name = "labelContact";
-            this.labelContact.Size = new System.Drawing.Size(92, 28);
-            this.labelContact.TabIndex = 30;
-            this.labelContact.Text = "Contact";
-            // 
-            // labelVolumeA
-            // 
-            this.labelVolumeA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelVolumeA.AutoSize = true;
-            this.labelVolumeA.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVolumeA.ForeColor = System.Drawing.Color.White;
-            this.labelVolumeA.Location = new System.Drawing.Point(136, 211);
-            this.labelVolumeA.Name = "labelVolumeA";
-            this.labelVolumeA.Size = new System.Drawing.Size(169, 28);
-            this.labelVolumeA.TabIndex = 32;
-            this.labelVolumeA.Text = "Volume d\'achat";
-            // 
-            // numVolumeA
-            // 
-            this.numVolumeA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numVolumeA.Location = new System.Drawing.Point(332, 213);
-            this.numVolumeA.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numVolumeA.Name = "numVolumeA";
-            this.numVolumeA.Size = new System.Drawing.Size(231, 26);
-            this.numVolumeA.TabIndex = 34;
             // 
             // numRemise
             // 
@@ -308,6 +244,73 @@
             this.labelRemise.Size = new System.Drawing.Size(86, 28);
             this.labelRemise.TabIndex = 35;
             this.labelRemise.Text = "Remise";
+            // 
+            // numVolumeA
+            // 
+            this.numVolumeA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numVolumeA.Location = new System.Drawing.Point(332, 213);
+            this.numVolumeA.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numVolumeA.Name = "numVolumeA";
+            this.numVolumeA.Size = new System.Drawing.Size(231, 26);
+            this.numVolumeA.TabIndex = 34;
+            // 
+            // labelVolumeA
+            // 
+            this.labelVolumeA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelVolumeA.AutoSize = true;
+            this.labelVolumeA.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVolumeA.ForeColor = System.Drawing.Color.White;
+            this.labelVolumeA.Location = new System.Drawing.Point(136, 211);
+            this.labelVolumeA.Name = "labelVolumeA";
+            this.labelVolumeA.Size = new System.Drawing.Size(169, 28);
+            this.labelVolumeA.TabIndex = 32;
+            this.labelVolumeA.Text = "Volume d\'achat";
+            // 
+            // textBoxContact
+            // 
+            this.textBoxContact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxContact.Location = new System.Drawing.Point(332, 139);
+            this.textBoxContact.MaxLength = 20;
+            this.textBoxContact.Name = "textBoxContact";
+            this.textBoxContact.Size = new System.Drawing.Size(231, 26);
+            this.textBoxContact.TabIndex = 31;
+            // 
+            // textBoxNomB
+            // 
+            this.textBoxNomB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxNomB.Location = new System.Drawing.Point(332, 71);
+            this.textBoxNomB.MaxLength = 20;
+            this.textBoxNomB.Name = "textBoxNomB";
+            this.textBoxNomB.Size = new System.Drawing.Size(231, 26);
+            this.textBoxNomB.TabIndex = 29;
+            // 
+            // labelContact
+            // 
+            this.labelContact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelContact.AutoSize = true;
+            this.labelContact.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContact.ForeColor = System.Drawing.Color.White;
+            this.labelContact.Location = new System.Drawing.Point(213, 137);
+            this.labelContact.Name = "labelContact";
+            this.labelContact.Size = new System.Drawing.Size(92, 28);
+            this.labelContact.TabIndex = 30;
+            this.labelContact.Text = "Contact";
+            // 
+            // labelNomB
+            // 
+            this.labelNomB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelNomB.AutoSize = true;
+            this.labelNomB.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomB.ForeColor = System.Drawing.Color.White;
+            this.labelNomB.Location = new System.Drawing.Point(93, 67);
+            this.labelNomB.Name = "labelNomB";
+            this.labelNomB.Size = new System.Drawing.Size(212, 28);
+            this.labelNomB.TabIndex = 28;
+            this.labelNomB.Text = "Nom de la boutique";
             // 
             // btnAddClient
             // 
@@ -346,15 +349,15 @@
             this.Controls.Add(this.labelTel);
             this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.labelType);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAddClient";
             this.Text = "FormAddClient";
-            this.Load += new System.EventHandler(this.FormAddClient_Load);
             this.groupBoxIndividu.ResumeLayout(false);
             this.groupBoxIndividu.PerformLayout();
             this.groupBoxBoutique.ResumeLayout(false);
             this.groupBoxBoutique.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVolumeA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numVolumeA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

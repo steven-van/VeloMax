@@ -124,7 +124,7 @@
             // 
             this.textBoxDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDesc.Location = new System.Drawing.Point(390, 71);
-            this.textBoxDesc.MaxLength = 14;
+            this.textBoxDesc.MaxLength = 40;
             this.textBoxDesc.Name = "textBoxDesc";
             this.textBoxDesc.Size = new System.Drawing.Size(231, 26);
             this.textBoxDesc.TabIndex = 9;
