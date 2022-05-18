@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewFournisseur = new System.Windows.Forms.DataGridView();
+            this.btnOpenAddFournisseur = new FontAwesome.Sharp.IconButton();
             this.dataSiret = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@
             this.dataLibelle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnOpenAddFournisseur = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFournisseur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +78,26 @@
             this.dataGridViewFournisseur.Size = new System.Drawing.Size(1044, 422);
             this.dataGridViewFournisseur.TabIndex = 0;
             this.dataGridViewFournisseur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFournisseur_CellClick);
+            // 
+            // btnOpenAddFournisseur
+            // 
+            this.btnOpenAddFournisseur.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenAddFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
+            this.btnOpenAddFournisseur.FlatAppearance.BorderSize = 0;
+            this.btnOpenAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenAddFournisseur.ForeColor = System.Drawing.Color.White;
+            this.btnOpenAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.btnOpenAddFournisseur.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnOpenAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOpenAddFournisseur.Location = new System.Drawing.Point(972, 523);
+            this.btnOpenAddFournisseur.Name = "btnOpenAddFournisseur";
+            this.btnOpenAddFournisseur.Size = new System.Drawing.Size(173, 65);
+            this.btnOpenAddFournisseur.TabIndex = 12;
+            this.btnOpenAddFournisseur.Text = "Ajouter un fournisseur";
+            this.btnOpenAddFournisseur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpenAddFournisseur.UseVisualStyleBackColor = false;
+            this.btnOpenAddFournisseur.Click += new System.EventHandler(this.btnOpenAddFournisseur_Click);
             // 
             // dataSiret
             // 
@@ -128,7 +148,6 @@
             this.dataLibelle.HeaderText = "libelle";
             this.dataLibelle.Name = "dataLibelle";
             this.dataLibelle.ReadOnly = true;
-            this.dataLibelle.Width = 150;
             // 
             // btnUpdate
             // 
@@ -163,26 +182,6 @@
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseColumnTextForButtonValue = true;
             this.btnDelete.Width = 150;
-            // 
-            // btnOpenAddFournisseur
-            // 
-            this.btnOpenAddFournisseur.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOpenAddFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
-            this.btnOpenAddFournisseur.FlatAppearance.BorderSize = 0;
-            this.btnOpenAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenAddFournisseur.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenAddFournisseur.ForeColor = System.Drawing.Color.White;
-            this.btnOpenAddFournisseur.IconChar = FontAwesome.Sharp.IconChar.Building;
-            this.btnOpenAddFournisseur.IconColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnOpenAddFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOpenAddFournisseur.Location = new System.Drawing.Point(972, 523);
-            this.btnOpenAddFournisseur.Name = "btnOpenAddFournisseur";
-            this.btnOpenAddFournisseur.Size = new System.Drawing.Size(173, 65);
-            this.btnOpenAddFournisseur.TabIndex = 12;
-            this.btnOpenAddFournisseur.Text = "Ajouter un fournisseur";
-            this.btnOpenAddFournisseur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOpenAddFournisseur.UseVisualStyleBackColor = false;
-            this.btnOpenAddFournisseur.Click += new System.EventHandler(this.btnOpenAddFournisseur_Click);
             // 
             // FormFournisseur
             // 

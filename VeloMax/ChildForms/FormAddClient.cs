@@ -175,21 +175,20 @@ namespace VeloMax.ChildForms
                 string adresse = textBoxAdresse.Text.Trim();
                 string courriel = textBoxCourriel.Text.Trim();
                 string tel = textBoxTelephone.Text.Trim();
+                DBVeloMax.UpdateClient(idClient, type, adresse, courriel, tel);
                 if (type == "Individu")
                 {
                     string nomI = textBoxNomI.Text.Trim();
                     string prenom = textBoxPrenom.Text.Trim();
-                    //DBVeloMax.UpdateClientIndividu(idClient, nom, prenom);
+                    DBVeloMax.UpdateClientIndividu(idClient, nom, prenom);
                 }
-
                 if (type == "Boutique")
                 {
                     string nomB = textBoxNomB.Text.Trim();
                     string contact = textBoxContact.Text.Trim();
                     int volumeA = Convert.ToInt32(numVolumeA.Value);
                     int remise = Convert.ToInt32(numRemise.Value);
-
-                    //DBVeloMax.UpdateClientBoutique(idClient, nomB, contact, remise, volumeA);
+                    DBVeloMax.UpdateClientBoutique(idClient, nomB, contact, remise, volumeA);
                 }
                 ClearInputs();
                 this.Close();

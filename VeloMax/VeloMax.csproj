@@ -99,11 +99,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildForms\FormAddAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormAddAdherent.Designer.cs">
+      <DependentUpon>FormAddAdherent.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\FormAddClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\FormAddClient.Designer.cs">
       <DependentUpon>FormAddClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormAdherent.Designer.cs">
+      <DependentUpon>FormAdherent.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\FormClient.cs">
       <SubType>Form</SubType>
@@ -180,8 +192,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildForms\FormAddAdherent.resx">
+      <DependentUpon>FormAddAdherent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormAddClient.resx">
       <DependentUpon>FormAddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormAdherent.resx">
+      <DependentUpon>FormAdherent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>

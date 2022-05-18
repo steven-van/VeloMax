@@ -27,7 +27,7 @@ namespace VeloMax.ChildForms
 
         public void DisplayCommande()
         {
-            DBVeloMax.DisplayAndSearch("SELECT idCommande, dateC, adresseL, dateL, idClient FROM Commande;", dataGridViewCommande);
+            DBVeloMax.DisplayAndSearch("SELECT idCommande, dateC, adresseL, dateL, idClienT FROM Commande", dataGridViewCommande);
 
         }
 

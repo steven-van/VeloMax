@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnClients = new FontAwesome.Sharp.IconButton();
+            this.btnAdherent = new FontAwesome.Sharp.IconButton();
+            this.btnClient = new FontAwesome.Sharp.IconButton();
             this.btnModele = new FontAwesome.Sharp.IconButton();
             this.btnPiece = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -58,7 +59,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.panelMenu.Controls.Add(this.btnClients);
+            this.panelMenu.Controls.Add(this.btnAdherent);
+            this.panelMenu.Controls.Add(this.btnClient);
             this.panelMenu.Controls.Add(this.btnModele);
             this.panelMenu.Controls.Add(this.btnPiece);
             this.panelMenu.Controls.Add(this.btnExit);
@@ -73,27 +75,49 @@
             this.panelMenu.Size = new System.Drawing.Size(220, 729);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnClients
+            // btnAdherent
             // 
-            this.btnClients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClients.FlatAppearance.BorderSize = 0;
-            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClients.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.ForeColor = System.Drawing.Color.White;
-            this.btnClients.IconChar = FontAwesome.Sharp.IconChar.Male;
-            this.btnClients.IconColor = System.Drawing.Color.White;
-            this.btnClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClients.IconSize = 40;
-            this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClients.Location = new System.Drawing.Point(0, 460);
-            this.btnClients.Name = "btnClients";
-            this.btnClients.Padding = new System.Windows.Forms.Padding(5);
-            this.btnClients.Size = new System.Drawing.Size(220, 60);
-            this.btnClients.TabIndex = 8;
-            this.btnClients.Text = "Clients";
-            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClients.UseVisualStyleBackColor = true;
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
+            this.btnAdherent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdherent.FlatAppearance.BorderSize = 0;
+            this.btnAdherent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdherent.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdherent.ForeColor = System.Drawing.Color.White;
+            this.btnAdherent.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            this.btnAdherent.IconColor = System.Drawing.Color.White;
+            this.btnAdherent.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdherent.IconSize = 40;
+            this.btnAdherent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdherent.Location = new System.Drawing.Point(0, 520);
+            this.btnAdherent.Name = "btnAdherent";
+            this.btnAdherent.Padding = new System.Windows.Forms.Padding(5);
+            this.btnAdherent.Size = new System.Drawing.Size(220, 60);
+            this.btnAdherent.TabIndex = 9;
+            this.btnAdherent.Text = "Adhérents";
+            this.btnAdherent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdherent.UseVisualStyleBackColor = true;
+            this.btnAdherent.Click += new System.EventHandler(this.btnAdherent_Click);
+            // 
+            // btnClient
+            // 
+            this.btnClient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClient.FlatAppearance.BorderSize = 0;
+            this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClient.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.ForeColor = System.Drawing.Color.White;
+            this.btnClient.IconChar = FontAwesome.Sharp.IconChar.Male;
+            this.btnClient.IconColor = System.Drawing.Color.White;
+            this.btnClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClient.IconSize = 40;
+            this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClient.Location = new System.Drawing.Point(0, 460);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Padding = new System.Windows.Forms.Padding(5);
+            this.btnClient.Size = new System.Drawing.Size(220, 60);
+            this.btnClient.TabIndex = 8;
+            this.btnClient.Text = "Clients";
+            this.btnClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnModele
             // 
@@ -387,7 +411,8 @@
         private System.Windows.Forms.Label labelDate;
         private FontAwesome.Sharp.IconButton btnModele;
         private FontAwesome.Sharp.IconButton btnPiece;
-        private FontAwesome.Sharp.IconButton btnClients;
+        private FontAwesome.Sharp.IconButton btnClient;
+        private FontAwesome.Sharp.IconButton btnAdherent;
     }
 }
 

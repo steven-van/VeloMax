@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -260,6 +260,7 @@ namespace VeloMax
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@TYPE", MySqlDbType.VarChar).Value = type;
+            cmd.Parameters.Add("@TYPE", MySqlDbType.Enum).Value = type;
             cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
             cmd.Parameters.Add("@COURRIEL", MySqlDbType.VarChar).Value = courriel;
             cmd.Parameters.Add("@TELEPHONE", MySqlDbType.VarChar).Value = telephone;
@@ -288,10 +289,34 @@ namespace VeloMax
             {
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Individu ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Particulier ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show("Erreur, l'individu n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur, le particulier n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+
+        public static void AddAdhesion(int idClient, int idFidelite, DateTime dateAdhesion)
+        {
+            string query = "INSERT INTO Adhesion (idClient, idFidelite, dateAdhesion) VALUES (@IDCLIENT, @IDFIDELITE, @DATEADHESION);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+            cmd.Parameters.Add("@DATEADHESION", MySqlDbType.Date).Value = dateAdhesion;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Particulier ajouté au Programme Fidelio avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le particulier n'a pas été ajouté au Programme Fidelio \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
         }
@@ -347,7 +372,7 @@ namespace VeloMax
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
-            cmd.Parameters.Add("@TYPE", MySqlDbType.VarChar).Value = type;
+            cmd.Parameters.Add("@TYPE", MySqlDbType.Enum).Value = type;
             cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
             cmd.Parameters.Add("@COURRIEL", MySqlDbType.VarChar).Value = courriel;
             cmd.Parameters.Add("@TELEPHONE", MySqlDbType.VarChar).Value = telephone;
@@ -361,8 +386,53 @@ namespace VeloMax
                 MessageBox.Show("Erreur, le client n'a pas été mis à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
-
         }
+
+        public static void UpdateClientIndividu(int idClient, string nom, string prenom)
+        {
+            string query = "UPDATE Individu SET nom = @NOM, prenom = @PRENOM WHERE idClient = @IDCLIENT;";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
+            cmd.Parameters.Add("@PRENOM", MySqlDbType.VarChar).Value = prenom;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Particulier mis à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le particulier n'a pas été mis à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void UpdateClientBoutique(int idClient, string nom, string contact, int remise, int volumeA)
+        {
+            string query = "UPDATE Boutique SET nom = @NOM, contact = @CONTACT, remise = @REMISE, volumeA = @VOLUMEA WHERE idClient = @IDCLIENT;";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@NOM", MySqlDbType.VarChar).Value = nom;
+            cmd.Parameters.Add("@CONTACT", MySqlDbType.VarChar).Value = contact;
+            cmd.Parameters.Add("@REMISE", MySqlDbType.Int32).Value = remise;
+            cmd.Parameters.Add("@VOLUMEA", MySqlDbType.Int32).Value = volumeA;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Boutique mise à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, la boutique n'a pas été mise à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+
 
         #endregion
 
@@ -457,17 +527,46 @@ namespace VeloMax
             cmd.CommandText = query;
             try
             {
-               id = Convert.ToInt32(cmd.ExecuteScalar());
-              
-            } catch (Exception ex)
+                id = Convert.ToInt32(cmd.ExecuteScalar());
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erreur, l'id n'a pas pu être récupéré \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
             return id;
-           
 
+        }
 
+        public static void PopulateComboBox(string query, ComboBox cb, int nbCols)
+        {
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            try
+            {
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string s = "";
+                    for(int i = 0; i < nbCols; i++)
+                    {
+                        if(i == nbCols - 1)
+                        {
+                            s += reader.GetString(i);
+                        }
+                        else
+                        {
+                            s += reader.GetString(i) + " - ";
+                        }
+                    }
+                    cb.Items.Add(s);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Erreur" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
         }
     }
 }

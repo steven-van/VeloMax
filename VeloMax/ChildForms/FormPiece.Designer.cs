@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewPiece = new System.Windows.Forms.DataGridView();
             this.dataIdPiece = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.dataDelaiA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddPiece = new FontAwesome.Sharp.IconButton();
+            this.btnOpenAddPiece = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPiece)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,8 +91,8 @@
             // dataIdPiece
             // 
             this.dataIdPiece.DataPropertyName = "idPiece";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataIdPiece.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataIdPiece.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataIdPiece.HeaderText = "idPiece";
             this.dataIdPiece.Name = "dataIdPiece";
             this.dataIdPiece.ReadOnly = true;
@@ -101,8 +101,8 @@
             // dataDesc
             // 
             this.dataDesc.DataPropertyName = "description";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDesc.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataDesc.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataDesc.HeaderText = "description";
             this.dataDesc.Name = "dataDesc";
             this.dataDesc.ReadOnly = true;
@@ -110,8 +110,8 @@
             // dataCategorie
             // 
             this.dataCategorie.DataPropertyName = "categorie";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataCategorie.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataCategorie.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataCategorie.HeaderText = "categorie";
             this.dataCategorie.Name = "dataCategorie";
             this.dataCategorie.ReadOnly = true;
@@ -119,8 +119,8 @@
             // dataPrixU
             // 
             this.dataPrixU.DataPropertyName = "prixU";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPrixU.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataPrixU.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataPrixU.HeaderText = "prixU";
             this.dataPrixU.Name = "dataPrixU";
             this.dataPrixU.ReadOnly = true;
@@ -128,8 +128,8 @@
             // dataStock
             // 
             this.dataStock.DataPropertyName = "stock";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataStock.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataStock.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataStock.HeaderText = "stock";
             this.dataStock.Name = "dataStock";
             this.dataStock.ReadOnly = true;
@@ -137,8 +137,8 @@
             // dataDateI
             // 
             this.dataDateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDateI.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataDateI.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataDateI.HeaderText = "dateI";
             this.dataDateI.Name = "dataDateI";
             this.dataDateI.ReadOnly = true;
@@ -146,8 +146,8 @@
             // dataDateD
             // 
             this.dataDateD.DataPropertyName = "dateD";
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDateD.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataDateD.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataDateD.HeaderText = "dateD";
             this.dataDateD.Name = "dataDateD";
             this.dataDateD.ReadOnly = true;
@@ -155,21 +155,21 @@
             // dataDelaiA
             // 
             this.dataDelaiA.DataPropertyName = "delaiA";
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDelaiA.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataDelaiA.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataDelaiA.HeaderText = "delaiA";
             this.dataDelaiA.Name = "dataDelaiA";
             this.dataDelaiA.ReadOnly = true;
             // 
             // btnUpdate
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            this.btnUpdate.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.btnUpdate.DefaultCellStyle = dataGridViewCellStyle9;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.HeaderText = "";
             this.btnUpdate.Name = "btnUpdate";
@@ -180,13 +180,13 @@
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle10;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.HeaderText = "";
             this.btnDelete.Name = "btnDelete";
@@ -195,25 +195,25 @@
             this.btnDelete.UseColumnTextForButtonValue = true;
             this.btnDelete.Width = 150;
             // 
-            // btnAddPiece
+            // btnOpenAddPiece
             // 
-            this.btnAddPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddPiece.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
-            this.btnAddPiece.FlatAppearance.BorderSize = 0;
-            this.btnAddPiece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPiece.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPiece.ForeColor = System.Drawing.Color.White;
-            this.btnAddPiece.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.btnAddPiece.IconColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnAddPiece.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddPiece.Location = new System.Drawing.Point(976, 512);
-            this.btnAddPiece.Name = "btnAddPiece";
-            this.btnAddPiece.Size = new System.Drawing.Size(173, 65);
-            this.btnAddPiece.TabIndex = 14;
-            this.btnAddPiece.Text = "Ajouter une pièce";
-            this.btnAddPiece.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddPiece.UseVisualStyleBackColor = false;
-            this.btnAddPiece.Click += new System.EventHandler(this.btnAddPiece_Click);
+            this.btnOpenAddPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenAddPiece.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
+            this.btnOpenAddPiece.FlatAppearance.BorderSize = 0;
+            this.btnOpenAddPiece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenAddPiece.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenAddPiece.ForeColor = System.Drawing.Color.White;
+            this.btnOpenAddPiece.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.btnOpenAddPiece.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnOpenAddPiece.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOpenAddPiece.Location = new System.Drawing.Point(976, 512);
+            this.btnOpenAddPiece.Name = "btnOpenAddPiece";
+            this.btnOpenAddPiece.Size = new System.Drawing.Size(173, 65);
+            this.btnOpenAddPiece.TabIndex = 14;
+            this.btnOpenAddPiece.Text = "Ajouter une pièce";
+            this.btnOpenAddPiece.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpenAddPiece.UseVisualStyleBackColor = false;
+            this.btnOpenAddPiece.Click += new System.EventHandler(this.btnOpenAddPiece_Click_1);
             // 
             // FormPiece
             // 
@@ -222,7 +222,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1255, 629);
             this.Controls.Add(this.dataGridViewPiece);
-            this.Controls.Add(this.btnAddPiece);
+            this.Controls.Add(this.btnOpenAddPiece);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPiece";
             this.Text = "FormPiece";
@@ -236,7 +236,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewPiece;
-        private FontAwesome.Sharp.IconButton btnAddPiece;
+        private FontAwesome.Sharp.IconButton btnOpenAddPiece;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataIdPiece;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCategorie;

@@ -27,12 +27,6 @@ namespace VeloMax.ChildForms
             DBVeloMax.DisplayAndSearch("SELECT idPiece, description, categorie, prixU, stock, dateI, dateD, delaiA FROM Piece;", dataGridViewPiece);
         }
 
-        private void btnOpenAddPiece_Click(object sender, EventArgs e)
-        {
-            formAddPiece.ClearInputs();
-            formAddPiece.SaveInfo();
-            formAddPiece.ShowDialog();
-        }
 
         private void FormPiece_Shown(object sender, EventArgs e)
         {
@@ -72,7 +66,7 @@ namespace VeloMax.ChildForms
             }
         }
 
-        private void btnAddPiece_Click(object sender, EventArgs e)
+        private void btnOpenAddPiece_Click_1(object sender, EventArgs e)
         {
             formAddPiece.ClearInputs();
             formAddPiece.SaveInfo();

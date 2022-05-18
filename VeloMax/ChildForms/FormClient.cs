@@ -76,17 +76,15 @@ namespace VeloMax.ChildForms
             if (e.ColumnIndex == 0) //Modifier
             {
                 formAddClient.ClearInputs();
-                formAddClient.idClient = Convert.ToInt32(dataGridViewIndividu.Rows[e.RowIndex].Cells[2].Value);
+                formAddClient.idClient = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[2].Value);
                 formAddClient.type = dataGridViewBoutique.Rows[e.RowIndex].Cells[3].Value.ToString();
                 formAddClient.adresse = dataGridViewBoutique.Rows[e.RowIndex].Cells[4].Value.ToString();
                 formAddClient.courriel = dataGridViewBoutique.Rows[e.RowIndex].Cells[5].Value.ToString();
                 formAddClient.telephone = dataGridViewBoutique.Rows[e.RowIndex].Cells[6].Value.ToString();
                 formAddClient.nom = dataGridViewBoutique.Rows[e.RowIndex].Cells[7].Value.ToString();
-
                 formAddClient.contact = dataGridViewBoutique.Rows[e.RowIndex].Cells[8].Value.ToString();
                 formAddClient.remise = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[9].Value);
                 formAddClient.volumeA = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[10].Value);
-
                 formAddClient.UpdateInfo();
                 formAddClient.ShowDialog();
                 return;

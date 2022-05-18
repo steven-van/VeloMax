@@ -154,10 +154,16 @@ namespace VeloMax
             labelDate.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void btnClients_Click(object sender, EventArgs e)
+        private void btnClient_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenSubForm(new ChildForms.FormClient());
+        }
+
+        private void btnAdherent_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenSubForm(new ChildForms.FormAdherent());
         }
     }
 }
