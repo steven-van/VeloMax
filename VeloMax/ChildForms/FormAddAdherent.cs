@@ -31,11 +31,12 @@ namespace VeloMax.ChildForms
 
         public void UpdateInfo()
         {
+
+            comboBoxClient.Text = client;
+            comboBoxFidelite.Text = fidelite;
             btnAddAdherent.Text = "Modifier";
             comboBoxClient.Enabled = false;
             btnAddAdherent.BackColor = Color.FromArgb(249, 180, 45);
-            comboBoxClient.SelectedItem = client;
-            comboBoxFidelite.SelectedItem = fidelite;
             datePickerDateAdhesion.Value = dateAdhesion;
 
         }
@@ -76,8 +77,8 @@ namespace VeloMax.ChildForms
             }
             if (btnAddAdherent.Text == "Modifier")
             {
-                int idC = Convert.ToInt32(comboBoxClient.SelectedItem.ToString()[0]);
-                int idF = Convert.ToInt32(comboBoxFidelite.SelectedItem.ToString()[0]);
+                int idC = Int32.Parse(comboBoxClient.SelectedItem.ToString().Split('-')[0]);
+                int idF = Int32.Parse(comboBoxFidelite.SelectedItem.ToString().Split('-')[0]);
                 DateTime date = datePickerDateAdhesion.Value;
                 //DBVeloMax.UpdateAdhesion(idC, idF, date);
                 ClearInputs();

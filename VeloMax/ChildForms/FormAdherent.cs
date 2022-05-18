@@ -45,6 +45,7 @@ namespace VeloMax.ChildForms
                 formAddAdherent.ClearInputs();
                 formAddAdherent.client = String.Format("{0} - {1} - {2}", dataGridViewAdhesion.Rows[e.RowIndex].Cells[4].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[5].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[6].Value.ToString());
                 formAddAdherent.fidelite = String.Format("{0} - {1}", dataGridViewAdhesion.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[3].Value.ToString());
+                formAddAdherent.dateAdhesion = dataGridViewAdhesion.Rows[e.RowIndex].Cells[7].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewAdhesion.Rows[e.RowIndex].Cells[7].Value);
                 formAddAdherent.UpdateInfo();
                 formAddAdherent.ShowDialog();
                 return;
