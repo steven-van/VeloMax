@@ -63,5 +63,10 @@ namespace VeloMax.ChildForms
                 return;
             }
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT idModele, nom, grandeur, prixU, ligneP, dateI, dateD FROM Modele WHERE nom LIKE '%" + textBoxSearch.Text + "%';", dataGridViewModele);
+        }
     }
 }

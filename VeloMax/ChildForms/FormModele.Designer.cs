@@ -38,7 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewModele = new System.Windows.Forms.DataGridView();
-            this.btnOpenAddModele = new FontAwesome.Sharp.IconButton();
             this.dataIdModele = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGrandeur = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,8 @@
             this.dataDateD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnOpenAddModele = new FontAwesome.Sharp.IconButton();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModele)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.btnUpdate,
             this.btnDelete});
             this.dataGridViewModele.GridColor = System.Drawing.Color.White;
-            this.dataGridViewModele.Location = new System.Drawing.Point(105, 52);
+            this.dataGridViewModele.Location = new System.Drawing.Point(105, 140);
             this.dataGridViewModele.MultiSelect = false;
             this.dataGridViewModele.Name = "dataGridViewModele";
             this.dataGridViewModele.ReadOnly = true;
@@ -84,26 +85,6 @@
             this.dataGridViewModele.Size = new System.Drawing.Size(1044, 422);
             this.dataGridViewModele.TabIndex = 13;
             this.dataGridViewModele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewModele_CellClick);
-            // 
-            // btnOpenAddModele
-            // 
-            this.btnOpenAddModele.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOpenAddModele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
-            this.btnOpenAddModele.FlatAppearance.BorderSize = 0;
-            this.btnOpenAddModele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenAddModele.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenAddModele.ForeColor = System.Drawing.Color.White;
-            this.btnOpenAddModele.IconChar = FontAwesome.Sharp.IconChar.Bicycle;
-            this.btnOpenAddModele.IconColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnOpenAddModele.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOpenAddModele.Location = new System.Drawing.Point(976, 512);
-            this.btnOpenAddModele.Name = "btnOpenAddModele";
-            this.btnOpenAddModele.Size = new System.Drawing.Size(173, 65);
-            this.btnOpenAddModele.TabIndex = 14;
-            this.btnOpenAddModele.Text = "Ajouter un modèle";
-            this.btnOpenAddModele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOpenAddModele.UseVisualStyleBackColor = false;
-            this.btnOpenAddModele.Click += new System.EventHandler(this.btnOpenAddModele_Click);
             // 
             // dataIdModele
             // 
@@ -208,12 +189,45 @@
             this.btnDelete.UseColumnTextForButtonValue = true;
             this.btnDelete.Width = 150;
             // 
+            // btnOpenAddModele
+            // 
+            this.btnOpenAddModele.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenAddModele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(174)))), ((int)(((byte)(124)))));
+            this.btnOpenAddModele.FlatAppearance.BorderSize = 0;
+            this.btnOpenAddModele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenAddModele.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenAddModele.ForeColor = System.Drawing.Color.White;
+            this.btnOpenAddModele.IconChar = FontAwesome.Sharp.IconChar.Bicycle;
+            this.btnOpenAddModele.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnOpenAddModele.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOpenAddModele.Location = new System.Drawing.Point(105, 43);
+            this.btnOpenAddModele.Name = "btnOpenAddModele";
+            this.btnOpenAddModele.Size = new System.Drawing.Size(173, 65);
+            this.btnOpenAddModele.TabIndex = 14;
+            this.btnOpenAddModele.Text = "Ajouter un modèle";
+            this.btnOpenAddModele.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpenAddModele.UseVisualStyleBackColor = false;
+            this.btnOpenAddModele.Click += new System.EventHandler(this.btnOpenAddModele_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSearch.BackColor = System.Drawing.Color.White;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(855, 73);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(294, 35);
+            this.textBoxSearch.TabIndex = 18;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
             // FormModele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1255, 629);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridViewModele);
             this.Controls.Add(this.btnOpenAddModele);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -222,6 +236,7 @@
             this.Shown += new System.EventHandler(this.FormModele_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModele)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,5 +253,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDateD;
         private System.Windows.Forms.DataGridViewButtonColumn btnUpdate;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }

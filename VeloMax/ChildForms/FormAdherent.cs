@@ -60,5 +60,10 @@ namespace VeloMax.ChildForms
                 return;
             }
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT idFidelite, description,  idClient, nom, prenom, dateAdhesion, duree, rabais FROM Adhesion NATURAL JOIN Individu NATURAL JOIN Fidelite WHERE nom LIKE '%" + textBoxSearch.Text + "%';", dataGridViewAdhesion);
+        }
     }
 }

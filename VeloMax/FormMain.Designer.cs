@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnStock = new FontAwesome.Sharp.IconButton();
+            this.btnStats = new FontAwesome.Sharp.IconButton();
+            this.btnCommande = new FontAwesome.Sharp.IconButton();
             this.btnAdherent = new FontAwesome.Sharp.IconButton();
             this.btnClient = new FontAwesome.Sharp.IconButton();
             this.btnModele = new FontAwesome.Sharp.IconButton();
             this.btnPiece = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.btnStats = new FontAwesome.Sharp.IconButton();
-            this.btnStock = new FontAwesome.Sharp.IconButton();
-            this.btnCommande = new FontAwesome.Sharp.IconButton();
             this.btnFournisseur = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -59,14 +59,14 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.panelMenu.Controls.Add(this.btnStock);
+            this.panelMenu.Controls.Add(this.btnStats);
+            this.panelMenu.Controls.Add(this.btnCommande);
             this.panelMenu.Controls.Add(this.btnAdherent);
             this.panelMenu.Controls.Add(this.btnClient);
             this.panelMenu.Controls.Add(this.btnModele);
             this.panelMenu.Controls.Add(this.btnPiece);
             this.panelMenu.Controls.Add(this.btnExit);
-            this.panelMenu.Controls.Add(this.btnStats);
-            this.panelMenu.Controls.Add(this.btnStock);
-            this.panelMenu.Controls.Add(this.btnCommande);
             this.panelMenu.Controls.Add(this.btnFournisseur);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -74,6 +74,72 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 729);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnStock
+            // 
+            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.IconChar = FontAwesome.Sharp.IconChar.Boxes;
+            this.btnStock.IconColor = System.Drawing.Color.White;
+            this.btnStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStock.IconSize = 40;
+            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.Location = new System.Drawing.Point(0, 520);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Padding = new System.Windows.Forms.Padding(5);
+            this.btnStock.Size = new System.Drawing.Size(220, 60);
+            this.btnStock.TabIndex = 12;
+            this.btnStock.Text = "Stock";
+            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // btnStats
+            // 
+            this.btnStats.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStats.FlatAppearance.BorderSize = 0;
+            this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStats.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStats.ForeColor = System.Drawing.Color.White;
+            this.btnStats.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.btnStats.IconColor = System.Drawing.Color.White;
+            this.btnStats.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStats.IconSize = 40;
+            this.btnStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStats.Location = new System.Drawing.Point(0, 460);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Padding = new System.Windows.Forms.Padding(5);
+            this.btnStats.Size = new System.Drawing.Size(220, 60);
+            this.btnStats.TabIndex = 11;
+            this.btnStats.Text = "Statistiques";
+            this.btnStats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
+            // 
+            // btnCommande
+            // 
+            this.btnCommande.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCommande.FlatAppearance.BorderSize = 0;
+            this.btnCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommande.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommande.ForeColor = System.Drawing.Color.White;
+            this.btnCommande.IconChar = FontAwesome.Sharp.IconChar.ShoppingBasket;
+            this.btnCommande.IconColor = System.Drawing.Color.White;
+            this.btnCommande.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCommande.IconSize = 40;
+            this.btnCommande.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCommande.Location = new System.Drawing.Point(0, 400);
+            this.btnCommande.Name = "btnCommande";
+            this.btnCommande.Padding = new System.Windows.Forms.Padding(5);
+            this.btnCommande.Size = new System.Drawing.Size(220, 60);
+            this.btnCommande.TabIndex = 10;
+            this.btnCommande.Text = "Commandes";
+            this.btnCommande.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCommande.UseVisualStyleBackColor = true;
+            this.btnCommande.Click += new System.EventHandler(this.btnCommande_Click);
             // 
             // btnAdherent
             // 
@@ -87,7 +153,7 @@
             this.btnAdherent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdherent.IconSize = 40;
             this.btnAdherent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdherent.Location = new System.Drawing.Point(0, 520);
+            this.btnAdherent.Location = new System.Drawing.Point(0, 340);
             this.btnAdherent.Name = "btnAdherent";
             this.btnAdherent.Padding = new System.Windows.Forms.Padding(5);
             this.btnAdherent.Size = new System.Drawing.Size(220, 60);
@@ -109,7 +175,7 @@
             this.btnClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClient.IconSize = 40;
             this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Location = new System.Drawing.Point(0, 460);
+            this.btnClient.Location = new System.Drawing.Point(0, 280);
             this.btnClient.Name = "btnClient";
             this.btnClient.Padding = new System.Windows.Forms.Padding(5);
             this.btnClient.Size = new System.Drawing.Size(220, 60);
@@ -131,7 +197,7 @@
             this.btnModele.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModele.IconSize = 40;
             this.btnModele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModele.Location = new System.Drawing.Point(0, 400);
+            this.btnModele.Location = new System.Drawing.Point(0, 220);
             this.btnModele.Name = "btnModele";
             this.btnModele.Padding = new System.Windows.Forms.Padding(5);
             this.btnModele.Size = new System.Drawing.Size(220, 60);
@@ -153,7 +219,7 @@
             this.btnPiece.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPiece.IconSize = 40;
             this.btnPiece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPiece.Location = new System.Drawing.Point(0, 340);
+            this.btnPiece.Location = new System.Drawing.Point(0, 160);
             this.btnPiece.Name = "btnPiece";
             this.btnPiece.Padding = new System.Windows.Forms.Padding(5);
             this.btnPiece.Size = new System.Drawing.Size(220, 60);
@@ -183,72 +249,6 @@
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnStats
-            // 
-            this.btnStats.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStats.FlatAppearance.BorderSize = 0;
-            this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStats.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStats.ForeColor = System.Drawing.Color.White;
-            this.btnStats.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
-            this.btnStats.IconColor = System.Drawing.Color.White;
-            this.btnStats.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStats.IconSize = 40;
-            this.btnStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStats.Location = new System.Drawing.Point(0, 280);
-            this.btnStats.Name = "btnStats";
-            this.btnStats.Padding = new System.Windows.Forms.Padding(5);
-            this.btnStats.Size = new System.Drawing.Size(220, 60);
-            this.btnStats.TabIndex = 4;
-            this.btnStats.Text = "Statistiques";
-            this.btnStats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStats.UseVisualStyleBackColor = true;
-            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
-            // 
-            // btnStock
-            // 
-            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.btnStock.IconColor = System.Drawing.Color.White;
-            this.btnStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStock.IconSize = 40;
-            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStock.Location = new System.Drawing.Point(0, 220);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Padding = new System.Windows.Forms.Padding(5);
-            this.btnStock.Size = new System.Drawing.Size(220, 60);
-            this.btnStock.TabIndex = 3;
-            this.btnStock.Text = "Stock";
-            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStock.UseVisualStyleBackColor = true;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
-            // 
-            // btnCommande
-            // 
-            this.btnCommande.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCommande.FlatAppearance.BorderSize = 0;
-            this.btnCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCommande.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCommande.ForeColor = System.Drawing.Color.White;
-            this.btnCommande.IconChar = FontAwesome.Sharp.IconChar.ShoppingBasket;
-            this.btnCommande.IconColor = System.Drawing.Color.White;
-            this.btnCommande.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCommande.IconSize = 40;
-            this.btnCommande.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCommande.Location = new System.Drawing.Point(0, 160);
-            this.btnCommande.Name = "btnCommande";
-            this.btnCommande.Padding = new System.Windows.Forms.Padding(5);
-            this.btnCommande.Size = new System.Drawing.Size(220, 60);
-            this.btnCommande.TabIndex = 2;
-            this.btnCommande.Text = "Commandes";
-            this.btnCommande.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCommande.UseVisualStyleBackColor = true;
-            this.btnCommande.Click += new System.EventHandler(this.btnCommande_Click);
             // 
             // btnFournisseur
             // 
@@ -397,9 +397,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnFournisseur;
-        private FontAwesome.Sharp.IconButton btnStats;
-        private FontAwesome.Sharp.IconButton btnStock;
-        private FontAwesome.Sharp.IconButton btnCommande;
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.PictureBox btnHome;
@@ -413,6 +410,9 @@
         private FontAwesome.Sharp.IconButton btnPiece;
         private FontAwesome.Sharp.IconButton btnClient;
         private FontAwesome.Sharp.IconButton btnAdherent;
+        private FontAwesome.Sharp.IconButton btnStock;
+        private FontAwesome.Sharp.IconButton btnStats;
+        private FontAwesome.Sharp.IconButton btnCommande;
     }
 }
 

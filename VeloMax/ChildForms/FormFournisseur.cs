@@ -63,5 +63,9 @@ namespace VeloMax.ChildForms
             }
         }
 
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT siret, nom, contact, adresse, libelle FROM Fournisseur WHERE nom LIKE '%" + textBoxSearch.Text + "%';", dataGridViewFournisseur);
+        }
     }
 }

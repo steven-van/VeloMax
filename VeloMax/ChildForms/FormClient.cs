@@ -99,5 +99,17 @@ namespace VeloMax.ChildForms
                 return;
             }
         }
+
+        private void textBoxSearchI_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT idClient, type, adresse, courriel, telephone, nom, prenom FROM Client NATURAL JOIN Individu WHERE nom LIKE '%" + textBoxSearchI.Text + "%';", dataGridViewIndividu);
+
+        }
+
+        private void textBoxSearchB_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT idClient, type, adresse, courriel, telephone, nom, contact, remise, volumeA FROM Client NATURAL JOIN Boutique WHERE nom LIKE '%" + textBoxSearchB.Text + "%';", dataGridViewBoutique);
+
+        }
     }
 }

@@ -72,5 +72,10 @@ namespace VeloMax.ChildForms
             formAddPiece.SaveInfo();
             formAddPiece.ShowDialog();
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT idPiece, description, categorie, prixU, stock, dateI, dateD, delaiA FROM Piece WHERE description LIKE '%" + textBoxSearch.Text + "%';", dataGridViewPiece);
+        }
     }
 }

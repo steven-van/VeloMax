@@ -27,7 +27,7 @@ namespace VeloMax.ChildForms
 
         public void DisplayCommande()
         {
-            DBVeloMax.DisplayAndSearch("SELECT idCommande, dateC, adresseL, dateL, idClienT FROM Commande", dataGridViewCommande);
+            DBVeloMax.DisplayAndSearch("SELECT idCommande, dateC, adresseL, dateL, idClient, type FROM Commande NATURAL JOIN Client", dataGridViewCommande);
 
         }
 
@@ -43,6 +43,11 @@ namespace VeloMax.ChildForms
             //formAddFournisseur.SaveInfo();
             formAddCommande.ShowDialog();
 
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            DBVeloMax.DisplayAndSearch("SELECT idCommande, dateC, adresseL, dateL, idClient, type FROM Commande NATURAL JOIN Client WHERE idCommande LIKE '%" + textBoxSearch.Text + "%';", dataGridViewCommande);
         }
     }
 }

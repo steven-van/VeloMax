@@ -50,6 +50,7 @@
             this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnOpenAddPiece = new FontAwesome.Sharp.IconButton();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPiece)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             this.btnUpdate,
             this.btnDelete});
             this.dataGridViewPiece.GridColor = System.Drawing.Color.White;
-            this.dataGridViewPiece.Location = new System.Drawing.Point(105, 52);
+            this.dataGridViewPiece.Location = new System.Drawing.Point(105, 122);
             this.dataGridViewPiece.MultiSelect = false;
             this.dataGridViewPiece.Name = "dataGridViewPiece";
             this.dataGridViewPiece.ReadOnly = true;
@@ -206,7 +207,7 @@
             this.btnOpenAddPiece.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
             this.btnOpenAddPiece.IconColor = System.Drawing.SystemColors.WindowFrame;
             this.btnOpenAddPiece.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOpenAddPiece.Location = new System.Drawing.Point(976, 512);
+            this.btnOpenAddPiece.Location = new System.Drawing.Point(105, 25);
             this.btnOpenAddPiece.Name = "btnOpenAddPiece";
             this.btnOpenAddPiece.Size = new System.Drawing.Size(173, 65);
             this.btnOpenAddPiece.TabIndex = 14;
@@ -215,12 +216,25 @@
             this.btnOpenAddPiece.UseVisualStyleBackColor = false;
             this.btnOpenAddPiece.Click += new System.EventHandler(this.btnOpenAddPiece_Click_1);
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSearch.BackColor = System.Drawing.Color.White;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(855, 55);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(294, 35);
+            this.textBoxSearch.TabIndex = 18;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
             // FormPiece
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1255, 629);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridViewPiece);
             this.Controls.Add(this.btnOpenAddPiece);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,6 +244,7 @@
             this.Shown += new System.EventHandler(this.FormPiece_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPiece)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -247,5 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDelaiA;
         private System.Windows.Forms.DataGridViewButtonColumn btnUpdate;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }
