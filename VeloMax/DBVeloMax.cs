@@ -431,8 +431,81 @@ namespace VeloMax
 
         #endregion
 
+<<<<<<< Updated upstream
 
         #region Commandes
+=======
+
+        #region Adhesion
+
+        public static void AddAdhesion(int idClient, int idFidelite, DateTime dateAdhesion)
+        {
+            string query = "INSERT INTO Adhesion (idClient, idFidelite, dateAdhesion) VALUES (@IDCLIENT, @IDFIDELITE, @DATEADHESION);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+            cmd.Parameters.Add("@DATEADHESION", MySqlDbType.Date).Value = dateAdhesion;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Particulier ajouté au Programme Fidelio avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le particulier n'a pas été ajouté au Programme Fidelio \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void DeleteAdhesion(int idClient, int idFidelite)
+        {
+            string query = "DELETE FROM Adhesion WHERE idClient = @IDCLIENT AND idFidelite = @IDFIDELITE";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Adhésion supprimée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'adhésion n'a pas été supprimée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        //public static void UpdateAdhesion(int idClient, int idFidelite, DateTime dateAdhesion)
+        //{
+        //    string query = "UPDATE Adhesion SET dateAdhesion = @DATEADHESION WHERE idClient = @IDCLIENT, idFidelite = @IDFIDELITE;";
+        //    MySqlConnection connection = GetDBConnection();
+        //    MySqlCommand cmd = new MySqlCommand(query, connection);
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+        //    cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+        //    cmd.Parameters.Add("@DATEADHESION", MySqlDbType.Date).Value = dateAdhesion;
+        //    try
+        //    {
+        //        cmd.ExecuteNonQuery();
+        //        MessageBox.Show("Adhésion mise à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        MessageBox.Show("Erreur, l'adhésion n'a pas été mise à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    connection.Close();
+
+        //}
+
+        #endregion
+
+
+        #region Commande
+>>>>>>> Stashed changes
 
         public static void AddCommande(DateTime dateC, string adresseL, DateTime dateL, int idClient)
         {
@@ -504,11 +577,69 @@ namespace VeloMax
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
         #region Adhesion
 
 
         public static void DeleteUpdate(int idClient, int idFidelite)
+=======
+        #region Achat_piece
+
+        public static void AddAchat_piece(int idCommande, int idPiece, int quantite)
+        {
+            string query = "INSERT INTO Achat_piece (idCommande, idPiece, quantite) VALUES (@IDCOMMANDE, @IDPIECE, @QUANTITE);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCOMMANDE", MySqlDbType.Int32).Value = idCommande;
+            cmd.Parameters.Add("@IDPIECE", MySqlDbType.Int32).Value = idPiece;
+            cmd.Parameters.Add("@QUANTITE", MySqlDbType.Int32).Value = quantite;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Achat de la pièce ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'achat de la pièce n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
+        #region Achat_modele
+
+        public static void AddAchat_modele(int idCommande, int idModele, int quantite)
+        {
+            string query = "INSERT INTO Achat_modele (idCommande, idModele, quantite) VALUES (@IDCOMMANDE, @IDMODELE, @QUANTITE);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCOMMANDE", MySqlDbType.Int32).Value = idCommande;
+            cmd.Parameters.Add("@IDMODELE", MySqlDbType.Int32).Value = idModele;
+            cmd.Parameters.Add("@QUANTITE", MySqlDbType.Int32).Value = quantite;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Achat du modèle ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'achat du modèle n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
+        public static void DisplayAndSearch(string query, DataGridView dgv)
+>>>>>>> Stashed changes
         {
             string query = "DELETE FROM Adhesion WHERE idClient = @IDCLIENT AND idFidelite = @IDFIDELITE";
             MySqlConnection connection = GetDBConnection();
