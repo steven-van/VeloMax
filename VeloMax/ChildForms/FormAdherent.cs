@@ -40,21 +40,21 @@ namespace VeloMax.ChildForms
 
         private void dataGridViewAdhesion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0) //Modifier
+            //if (e.ColumnIndex == 0) //Modifier
+            //{
+            //    formAddAdherent.ClearInputs();
+            //    formAddAdherent.client = String.Format("{0} - {1} - {2}", dataGridViewAdhesion.Rows[e.RowIndex].Cells[4].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[5].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[6].Value.ToString());
+            //    formAddAdherent.fidelite = String.Format("{0} - {1}", dataGridViewAdhesion.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[3].Value.ToString());
+            //    formAddAdherent.dateAdhesion = dataGridViewAdhesion.Rows[e.RowIndex].Cells[7].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewAdhesion.Rows[e.RowIndex].Cells[7].Value);
+            //    formAddAdherent.UpdateInfo();
+            //    formAddAdherent.ShowDialog();
+            //    return;
+            //}
+            if (e.ColumnIndex == 0) //Supprimer
             {
-                formAddAdherent.ClearInputs();
-                formAddAdherent.client = String.Format("{0} - {1} - {2}", dataGridViewAdhesion.Rows[e.RowIndex].Cells[4].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[5].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[6].Value.ToString());
-                formAddAdherent.fidelite = String.Format("{0} - {1}", dataGridViewAdhesion.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridViewAdhesion.Rows[e.RowIndex].Cells[3].Value.ToString());
-                formAddAdherent.dateAdhesion = dataGridViewAdhesion.Rows[e.RowIndex].Cells[7].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewAdhesion.Rows[e.RowIndex].Cells[7].Value);
-                formAddAdherent.UpdateInfo();
-                formAddAdherent.ShowDialog();
-                return;
-            }
-            if (e.ColumnIndex == 1) //Supprimer
-            {
-                if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce fournisseur ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer cette adhésion ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DBVeloMax.DeleteFournisseur(dataGridViewAdhesion.Rows[e.RowIndex].Cells[4].Value.ToString());
+                    DBVeloMax.DeleteAdhesion(Convert.ToInt32(dataGridViewAdhesion.Rows[e.RowIndex].Cells[3].Value), Convert.ToInt32(dataGridViewAdhesion.Rows[e.RowIndex].Cells[1].Value));
                     DisplayAdherent();
                 }
                 return;

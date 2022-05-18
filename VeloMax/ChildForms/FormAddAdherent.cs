@@ -29,17 +29,18 @@ namespace VeloMax.ChildForms
             datePickerDateAdhesion.Value = DateTime.Now;
         }
 
-        public void UpdateInfo()
-        {
+        //public void UpdateInfo()
+        //{
+        //    comboBoxClient.Text = client;
+        //    comboBoxFidelite.Text = fidelite;
+        //    datePickerDateAdhesion.Value = dateAdhesion;
+        //    comboBoxFidelite.Enabled = false;
+        //    comboBoxClient.Enabled = false;
+        //    btnAddAdherent.Text = "Modifier";
+        //    btnAddAdherent.BackColor = Color.FromArgb(249, 180, 45);
 
-            comboBoxClient.Text = client;
-            comboBoxFidelite.Text = fidelite;
-            btnAddAdherent.Text = "Modifier";
-            comboBoxClient.Enabled = false;
-            btnAddAdherent.BackColor = Color.FromArgb(249, 180, 45);
-            datePickerDateAdhesion.Value = dateAdhesion;
 
-        }
+        //}
 
         public void SaveInfo()
         {
@@ -75,15 +76,15 @@ namespace VeloMax.ChildForms
                 DBVeloMax.AddAdhesion(idC, idF, date);
                 ClearInputs();
             }
-            if (btnAddAdherent.Text == "Modifier")
-            {
-                int idC = Int32.Parse(comboBoxClient.SelectedItem.ToString().Split('-')[0]);
-                int idF = Int32.Parse(comboBoxFidelite.SelectedItem.ToString().Split('-')[0]);
-                DateTime date = datePickerDateAdhesion.Value;
-                //DBVeloMax.UpdateAdhesion(idC, idF, date);
-                ClearInputs();
-                this.Close();
-            }
+            //if (btnAddAdherent.Text == "Modifier")
+            //{
+            //    int idC = Int32.Parse(comboBoxClient.SelectedItem.ToString().Split('-')[0]);
+            //    int idF = Int32.Parse(comboBoxFidelite.SelectedItem.ToString().Split('-')[0]);
+            //    DateTime date = datePickerDateAdhesion.Value;
+            //    DBVeloMax.UpdateAdhesion(idC, idF, date);
+            //    ClearInputs();
+            //    this.Close();
+            //}
             formParent.DisplayAdherent();
         }
     }

@@ -299,28 +299,6 @@ namespace VeloMax
             connection.Close();
         }
 
-
-        public static void AddAdhesion(int idClient, int idFidelite, DateTime dateAdhesion)
-        {
-            string query = "INSERT INTO Adhesion (idClient, idFidelite, dateAdhesion) VALUES (@IDCLIENT, @IDFIDELITE, @DATEADHESION);";
-            MySqlConnection connection = GetDBConnection();
-            MySqlCommand cmd = new MySqlCommand(query, connection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
-            cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
-            cmd.Parameters.Add("@DATEADHESION", MySqlDbType.Date).Value = dateAdhesion;
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Particulier ajouté au Programme Fidelio avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Erreur, le particulier n'a pas été ajouté au Programme Fidelio \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            connection.Close();
-        }
-
         public static void AddClientBoutique(int idClient, string nom, string contact, int remise, int volumeA)
         {
             string query = "INSERT INTO Boutique (idClient, nom, contact, remise, volumeA) VALUES (@IDCLIENT, @NOM, @CONTACT, @REMISE, @VOLUMEA);";
@@ -436,6 +414,72 @@ namespace VeloMax
 
         #endregion
 
+        #region Adhesion
+
+        public static void AddAdhesion(int idClient, int idFidelite, DateTime dateAdhesion)
+        {
+            string query = "INSERT INTO Adhesion (idClient, idFidelite, dateAdhesion) VALUES (@IDCLIENT, @IDFIDELITE, @DATEADHESION);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+            cmd.Parameters.Add("@DATEADHESION", MySqlDbType.Date).Value = dateAdhesion;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Particulier ajouté au Programme Fidelio avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, le particulier n'a pas été ajouté au Programme Fidelio \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        public static void DeleteAdhesion(int idClient, int idFidelite)
+        {
+            string query = "DELETE FROM Adhesion WHERE idClient = @IDCLIENT AND idFidelite = @IDFIDELITE";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+            cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Adhésion supprimée avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'adhésion n'a pas été supprimée \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+        }
+
+        //public static void UpdateAdhesion(int idClient, int idFidelite, DateTime dateAdhesion)
+        //{
+        //    string query = "UPDATE Adhesion SET dateAdhesion = @DATEADHESION WHERE idClient = @IDCLIENT, idFidelite = @IDFIDELITE;";
+        //    MySqlConnection connection = GetDBConnection();
+        //    MySqlCommand cmd = new MySqlCommand(query, connection);
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.Parameters.Add("@IDCLIENT", MySqlDbType.Int32).Value = idClient;
+        //    cmd.Parameters.Add("@IDFIDELITE", MySqlDbType.Int32).Value = idFidelite;
+        //    cmd.Parameters.Add("@DATEADHESION", MySqlDbType.Date).Value = dateAdhesion;
+        //    try
+        //    {
+        //        cmd.ExecuteNonQuery();
+        //        MessageBox.Show("Adhésion mise à jour avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        MessageBox.Show("Erreur, l'adhésion n'a pas été mise à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    connection.Close();
+
+        //}
+
+        #endregion
 
         #region Commande
 
