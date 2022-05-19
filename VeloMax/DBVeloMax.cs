@@ -260,7 +260,6 @@ namespace VeloMax
             MySqlConnection connection = GetDBConnection();
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@TYPE", MySqlDbType.VarChar).Value = type;
             cmd.Parameters.Add("@TYPE", MySqlDbType.Enum).Value = type;
             cmd.Parameters.Add("@ADRESSE", MySqlDbType.VarChar).Value = adresse;
             cmd.Parameters.Add("@COURRIEL", MySqlDbType.VarChar).Value = courriel;
@@ -607,13 +606,20 @@ namespace VeloMax
 
         public static void DisplayAndSearch(string query, DataGridView dgv)
         {
-            MySqlConnection connection = GetDBConnection();
-            MySqlCommand cmd = new MySqlCommand(query, connection);
-            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
-            DataTable tbl = new DataTable();
-            adp.Fill(tbl);
-            dgv.DataSource = tbl;
-            connection.Close();
+            try
+            {
+                MySqlConnection connection = GetDBConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgv.DataSource = tbl;
+                connection.Close();
+            } catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                MessageBox.Show("Search error");
+            }
+            
         }
 
         public static int LastInsertedId()
