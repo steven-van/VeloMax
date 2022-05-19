@@ -13,9 +13,9 @@ namespace VeloMax.ChildForms
     public partial class FormAddCommande : Form
     {
         FormCommande formParent;
-        int idCommande;
-        string adresseL;
-        DateTime dateC, dateL;
+        //int idCommande;
+        //string adresseL;
+        //DateTime dateC, dateL;
 
         public FormAddCommande(FormCommande parent)
         {

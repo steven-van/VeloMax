@@ -617,9 +617,9 @@ namespace VeloMax
                 connection.Close();
             } catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show("Search error");
+                // Preventing bad entries
             }
-            
+
         }
 
         public static int LastInsertedId()

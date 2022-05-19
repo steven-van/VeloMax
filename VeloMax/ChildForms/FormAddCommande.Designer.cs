@@ -187,7 +187,7 @@
             this.btnAddCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCommande.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCommande.ForeColor = System.Drawing.Color.White;
-            this.btnAddCommande.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddCommande.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.btnAddCommande.IconColor = System.Drawing.Color.White;
             this.btnAddCommande.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddCommande.Location = new System.Drawing.Point(309, 593);
