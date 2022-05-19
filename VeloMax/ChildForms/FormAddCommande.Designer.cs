@@ -41,6 +41,10 @@
             this.datePickerDateC = new System.Windows.Forms.DateTimePicker();
             this.datePickerDateL = new System.Windows.Forms.DateTimePicker();
             this.btnAddCommande = new FontAwesome.Sharp.IconButton();
+            this.numModele = new System.Windows.Forms.NumericUpDown();
+            this.numPiece = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numModele)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPiece)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxClient
@@ -195,12 +199,30 @@
             this.btnAddCommande.UseVisualStyleBackColor = false;
             this.btnAddCommande.Click += new System.EventHandler(this.btnAddCommande_Click);
             // 
+            // numModele
+            // 
+            this.numModele.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numModele.Location = new System.Drawing.Point(559, 98);
+            this.numModele.Name = "numModele";
+            this.numModele.Size = new System.Drawing.Size(120, 26);
+            this.numModele.TabIndex = 30;
+            // 
+            // numPiece
+            // 
+            this.numPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numPiece.Location = new System.Drawing.Point(559, 178);
+            this.numPiece.Name = "numPiece";
+            this.numPiece.Size = new System.Drawing.Size(120, 26);
+            this.numPiece.TabIndex = 31;
+            // 
             // FormAddCommande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(736, 801);
+            this.Controls.Add(this.numPiece);
+            this.Controls.Add(this.numModele);
             this.Controls.Add(this.datePickerDateL);
             this.Controls.Add(this.datePickerDateC);
             this.Controls.Add(this.comboBoxModele);
@@ -217,6 +239,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAddCommande";
             this.Text = "FormAddCommande";
+            ((System.ComponentModel.ISupportInitialize)(this.numModele)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPiece)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +261,7 @@
         private System.Windows.Forms.ComboBox comboBoxModele;
         private System.Windows.Forms.DateTimePicker datePickerDateC;
         private System.Windows.Forms.DateTimePicker datePickerDateL;
-
+        private System.Windows.Forms.NumericUpDown numModele;
+        private System.Windows.Forms.NumericUpDown numPiece;
     }
 }
