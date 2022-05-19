@@ -57,18 +57,18 @@
             "Bon",
             "Moyen",
             "Mauvais"});
-            this.comboBoxClient.Location = new System.Drawing.Point(292, 501);
+            this.comboBoxClient.Location = new System.Drawing.Point(294, 512);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(231, 28);
+            this.comboBoxClient.Size = new System.Drawing.Size(349, 28);
             this.comboBoxClient.TabIndex = 21;
             // 
             // textBoxAdresseL
             // 
             this.textBoxAdresseL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxAdresseL.Location = new System.Drawing.Point(292, 409);
+            this.textBoxAdresseL.Location = new System.Drawing.Point(294, 420);
             this.textBoxAdresseL.MaxLength = 20;
             this.textBoxAdresseL.Name = "textBoxAdresseL";
-            this.textBoxAdresseL.Size = new System.Drawing.Size(231, 26);
+            this.textBoxAdresseL.Size = new System.Drawing.Size(349, 26);
             this.textBoxAdresseL.TabIndex = 19;
             // 
             // labelClient
@@ -77,7 +77,7 @@
             this.labelClient.AutoSize = true;
             this.labelClient.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClient.ForeColor = System.Drawing.Color.White;
-            this.labelClient.Location = new System.Drawing.Point(183, 503);
+            this.labelClient.Location = new System.Drawing.Point(185, 514);
             this.labelClient.Name = "labelClient";
             this.labelClient.Size = new System.Drawing.Size(70, 28);
             this.labelClient.TabIndex = 16;
@@ -89,7 +89,7 @@
             this.labelDateL.AutoSize = true;
             this.labelDateL.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateL.ForeColor = System.Drawing.Color.White;
-            this.labelDateL.Location = new System.Drawing.Point(80, 329);
+            this.labelDateL.Location = new System.Drawing.Point(82, 340);
             this.labelDateL.Name = "labelDateL";
             this.labelDateL.Size = new System.Drawing.Size(180, 28);
             this.labelDateL.TabIndex = 15;
@@ -101,7 +101,7 @@
             this.labelAdresseL.AutoSize = true;
             this.labelAdresseL.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAdresseL.ForeColor = System.Drawing.Color.White;
-            this.labelAdresseL.Location = new System.Drawing.Point(45, 409);
+            this.labelAdresseL.Location = new System.Drawing.Point(47, 420);
             this.labelAdresseL.Name = "labelAdresseL";
             this.labelAdresseL.Size = new System.Drawing.Size(211, 28);
             this.labelAdresseL.TabIndex = 14;
@@ -113,7 +113,7 @@
             this.labelDateC.AutoSize = true;
             this.labelDateC.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateC.ForeColor = System.Drawing.Color.White;
-            this.labelDateC.Location = new System.Drawing.Point(41, 257);
+            this.labelDateC.Location = new System.Drawing.Point(43, 268);
             this.labelDateC.Name = "labelDateC";
             this.labelDateC.Size = new System.Drawing.Size(215, 28);
             this.labelDateC.TabIndex = 13;
@@ -125,7 +125,7 @@
             this.labelPiece.AutoSize = true;
             this.labelPiece.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPiece.ForeColor = System.Drawing.Color.White;
-            this.labelPiece.Location = new System.Drawing.Point(190, 172);
+            this.labelPiece.Location = new System.Drawing.Point(192, 183);
             this.labelPiece.Name = "labelPiece";
             this.labelPiece.Size = new System.Drawing.Size(66, 28);
             this.labelPiece.TabIndex = 24;
@@ -136,9 +136,9 @@
             this.comboBoxPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxPiece.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPiece.FormattingEnabled = true;
-            this.comboBoxPiece.Location = new System.Drawing.Point(292, 176);
+            this.comboBoxPiece.Location = new System.Drawing.Point(294, 187);
             this.comboBoxPiece.Name = "comboBoxPiece";
-            this.comboBoxPiece.Size = new System.Drawing.Size(231, 28);
+            this.comboBoxPiece.Size = new System.Drawing.Size(349, 28);
             this.comboBoxPiece.TabIndex = 25;
             // 
             // labelModele
@@ -147,7 +147,7 @@
             this.labelModele.AutoSize = true;
             this.labelModele.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelModele.ForeColor = System.Drawing.Color.White;
-            this.labelModele.Location = new System.Drawing.Point(166, 93);
+            this.labelModele.Location = new System.Drawing.Point(168, 104);
             this.labelModele.Name = "labelModele";
             this.labelModele.Size = new System.Drawing.Size(87, 28);
             this.labelModele.TabIndex = 26;
@@ -158,25 +158,25 @@
             this.comboBoxModele.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxModele.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxModele.FormattingEnabled = true;
-            this.comboBoxModele.Location = new System.Drawing.Point(292, 97);
+            this.comboBoxModele.Location = new System.Drawing.Point(294, 108);
             this.comboBoxModele.Name = "comboBoxModele";
-            this.comboBoxModele.Size = new System.Drawing.Size(231, 28);
+            this.comboBoxModele.Size = new System.Drawing.Size(349, 28);
             this.comboBoxModele.TabIndex = 27;
             // 
             // datePickerDateC
             // 
             this.datePickerDateC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.datePickerDateC.Location = new System.Drawing.Point(292, 259);
+            this.datePickerDateC.Location = new System.Drawing.Point(294, 270);
             this.datePickerDateC.Name = "datePickerDateC";
-            this.datePickerDateC.Size = new System.Drawing.Size(231, 26);
+            this.datePickerDateC.Size = new System.Drawing.Size(349, 26);
             this.datePickerDateC.TabIndex = 28;
             // 
             // datePickerDateL
             // 
             this.datePickerDateL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.datePickerDateL.Location = new System.Drawing.Point(292, 333);
+            this.datePickerDateL.Location = new System.Drawing.Point(294, 344);
             this.datePickerDateL.Name = "datePickerDateL";
-            this.datePickerDateL.Size = new System.Drawing.Size(231, 26);
+            this.datePickerDateL.Size = new System.Drawing.Size(349, 26);
             this.datePickerDateL.TabIndex = 29;
             // 
             // btnAddCommande
@@ -190,7 +190,7 @@
             this.btnAddCommande.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.btnAddCommande.IconColor = System.Drawing.Color.White;
             this.btnAddCommande.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddCommande.Location = new System.Drawing.Point(309, 593);
+            this.btnAddCommande.Location = new System.Drawing.Point(389, 609);
             this.btnAddCommande.Name = "btnAddCommande";
             this.btnAddCommande.Size = new System.Drawing.Size(173, 65);
             this.btnAddCommande.TabIndex = 22;
@@ -202,7 +202,7 @@
             // numModele
             // 
             this.numModele.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numModele.Location = new System.Drawing.Point(559, 98);
+            this.numModele.Location = new System.Drawing.Point(680, 108);
             this.numModele.Name = "numModele";
             this.numModele.Size = new System.Drawing.Size(120, 26);
             this.numModele.TabIndex = 30;
@@ -210,7 +210,7 @@
             // numPiece
             // 
             this.numPiece.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numPiece.Location = new System.Drawing.Point(559, 178);
+            this.numPiece.Location = new System.Drawing.Point(680, 188);
             this.numPiece.Name = "numPiece";
             this.numPiece.Size = new System.Drawing.Size(120, 26);
             this.numPiece.TabIndex = 31;
@@ -220,7 +220,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(736, 801);
+            this.ClientSize = new System.Drawing.Size(895, 801);
             this.Controls.Add(this.numPiece);
             this.Controls.Add(this.numModele);
             this.Controls.Add(this.datePickerDateL);
