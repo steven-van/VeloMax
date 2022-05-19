@@ -13,9 +13,9 @@ namespace VeloMax.ChildForms
     public partial class FormAddCommande : Form
     {
         FormCommande formParent;
-        string modele, piece, client, adresseL;
+        int idCommande;
+        string adresseL;
         DateTime dateC, dateL;
-        int quantiteM, quantiteP;
 
         public FormAddCommande(FormCommande parent)
         {
@@ -31,20 +31,14 @@ namespace VeloMax.ChildForms
             textBoxAdresseL.Text = string.Empty;
         }
 
-        public void UpdateInfo()
-        {
-            btnAddCommande.Text = "Modifier";
-            btnAddCommande.BackColor = Color.FromArgb(249, 180, 45);
-            comboBoxModele.Text = modele;
-            comboBoxPiece.Text = piece;
-            comboBoxClient.Text = client;
-            numModele.Value = quantiteM;
-            numPiece.Value = quantiteP;
-            datePickerDateC.Value = dateC;
-            datePickerDateL.Value = dateL;
-            textBoxAdresseL.Text = adresseL;
+        //public void UpdateInfo()
+        //{
+        //    btnAddCommande.Text = "Modifier";
+        //    btnAddCommande.BackColor = Color.FromArgb(249, 180, 45);
+        //    datePickerDateL.Value = dateL;
+        //    textBoxAdresseL.Text = adresseL;
 
-        }
+        //}
 
         public void SaveInfo()
         {
@@ -101,12 +95,11 @@ namespace VeloMax.ChildForms
             }
             if (btnAddCommande.Text == "Modifier")
             {
-                //string siret = textBoxSiret.Text.Trim();
-                //string nom = textBoxNom.Text.Trim();
-                //string contact = textBoxContact.Text.Trim();
-                //string adresse = textBoxAdresse.Text.Trim();
-                //string libelle = comboBoxLibelle.SelectedItem.ToString().Trim();
-                //DBVeloMax.UpdateFournisseur(siret, nom, contact, adresse, libelle);
+                //int idCl = Int32.Parse(comboBoxClient.SelectedItem.ToString().Split('-')[0]);
+                //string adresse = textBoxAdresseL.Text;
+                //DateTime dateCommande = datePickerDateC.Value;
+                //DateTime dateLivraison = datePickerDateL.Value;
+                //DBVeloMax.UpdateCommande();
                 //ClearInputs();
                 //this.Close();
             }

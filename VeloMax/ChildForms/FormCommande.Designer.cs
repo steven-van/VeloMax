@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,19 +37,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnOpenAddCommande = new FontAwesome.Sharp.IconButton();
             this.textBoxSearchModele = new System.Windows.Forms.TextBox();
             this.dataGridViewAchatPiece = new System.Windows.Forms.DataGridView();
             this.dataGridViewAchatModele = new System.Windows.Forms.DataGridView();
-            this.dataIdCommande2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataIdModele = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataIdClient2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataQuantite2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDateC2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAdresseL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDateL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.textBoxSearchPiece = new System.Windows.Forms.TextBox();
             this.dataIdCommande1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataIdPiece = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,8 +56,15 @@
             this.dataDateC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAdresseL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDateL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataIdCommande2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataIdModele = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataIdClient2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataQuantite2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDateC2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAdresseL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDateL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAchatPiece)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAchatModele)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +120,6 @@
             this.dataDateC1,
             this.dataAdresseL1,
             this.dataDateL1,
-            this.btnUpdate,
             this.btnDelete});
             this.dataGridViewAchatPiece.GridColor = System.Drawing.Color.White;
             this.dataGridViewAchatPiece.Location = new System.Drawing.Point(50, 141);
@@ -158,7 +153,6 @@
             this.dataDateC2,
             this.dataAdresseL2,
             this.dataDateL2,
-            this.dataGridViewButtonColumn1,
             this.dataGridViewButtonColumn2});
             this.dataGridViewAchatModele.GridColor = System.Drawing.Color.White;
             this.dataGridViewAchatModele.Location = new System.Drawing.Point(651, 141);
@@ -172,108 +166,6 @@
             this.dataGridViewAchatModele.Size = new System.Drawing.Size(561, 422);
             this.dataGridViewAchatModele.TabIndex = 20;
             this.dataGridViewAchatModele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAchatModele_CellClick);
-            // 
-            // dataIdCommande2
-            // 
-            this.dataIdCommande2.DataPropertyName = "idCommande";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataIdCommande2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataIdCommande2.HeaderText = "idCommande";
-            this.dataIdCommande2.Name = "dataIdCommande2";
-            this.dataIdCommande2.ReadOnly = true;
-            this.dataIdCommande2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataIdCommande2.Width = 150;
-            // 
-            // dataIdModele
-            // 
-            this.dataIdModele.DataPropertyName = "idModele";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataIdModele.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataIdModele.HeaderText = "idModele";
-            this.dataIdModele.Name = "dataIdModele";
-            this.dataIdModele.ReadOnly = true;
-            this.dataIdModele.Width = 150;
-            // 
-            // dataIdClient2
-            // 
-            this.dataIdClient2.DataPropertyName = "idClient";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataIdClient2.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataIdClient2.HeaderText = "idClient";
-            this.dataIdClient2.Name = "dataIdClient2";
-            this.dataIdClient2.ReadOnly = true;
-            this.dataIdClient2.Width = 150;
-            // 
-            // dataQuantite2
-            // 
-            this.dataQuantite2.DataPropertyName = "quantite";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataQuantite2.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dataQuantite2.HeaderText = "quantite";
-            this.dataQuantite2.Name = "dataQuantite2";
-            this.dataQuantite2.ReadOnly = true;
-            this.dataQuantite2.Width = 150;
-            // 
-            // dataDateC2
-            // 
-            this.dataDateC2.DataPropertyName = "dateC";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDateC2.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataDateC2.HeaderText = "dateC";
-            this.dataDateC2.Name = "dataDateC2";
-            this.dataDateC2.ReadOnly = true;
-            // 
-            // dataAdresseL2
-            // 
-            this.dataAdresseL2.DataPropertyName = "adresseL";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.dataAdresseL2.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataAdresseL2.HeaderText = "adresseL";
-            this.dataAdresseL2.Name = "dataAdresseL2";
-            this.dataAdresseL2.ReadOnly = true;
-            // 
-            // dataDateL2
-            // 
-            this.dataDateL2.DataPropertyName = "dateL";
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.dataDateL2.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dataDateL2.HeaderText = "dateL";
-            this.dataDateL2.Name = "dataDateL2";
-            this.dataDateL2.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewButtonColumn1.HeaderText = "";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Text = "Modifier";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn1.Width = 150;
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewButtonColumn2.HeaderText = "";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.ReadOnly = true;
-            this.dataGridViewButtonColumn2.Text = "Supprimer";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn2.Width = 150;
             // 
             // textBoxSearchPiece
             // 
@@ -355,32 +247,15 @@
             this.dataDateL1.Name = "dataDateL1";
             this.dataDateL1.ReadOnly = true;
             // 
-            // btnUpdate
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.btnUpdate.DefaultCellStyle = dataGridViewCellStyle8;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.HeaderText = "";
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.ReadOnly = true;
-            this.btnUpdate.Text = "Modifier";
-            this.btnUpdate.UseColumnTextForButtonValue = true;
-            this.btnUpdate.Width = 150;
-            // 
             // btnDelete
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle8;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.HeaderText = "";
             this.btnDelete.Name = "btnDelete";
@@ -388,6 +263,91 @@
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseColumnTextForButtonValue = true;
             this.btnDelete.Width = 150;
+            // 
+            // dataIdCommande2
+            // 
+            this.dataIdCommande2.DataPropertyName = "idCommande";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataIdCommande2.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataIdCommande2.HeaderText = "idCommande";
+            this.dataIdCommande2.Name = "dataIdCommande2";
+            this.dataIdCommande2.ReadOnly = true;
+            this.dataIdCommande2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataIdCommande2.Width = 150;
+            // 
+            // dataIdModele
+            // 
+            this.dataIdModele.DataPropertyName = "idModele";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataIdModele.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataIdModele.HeaderText = "idModele";
+            this.dataIdModele.Name = "dataIdModele";
+            this.dataIdModele.ReadOnly = true;
+            this.dataIdModele.Width = 150;
+            // 
+            // dataIdClient2
+            // 
+            this.dataIdClient2.DataPropertyName = "idClient";
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataIdClient2.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataIdClient2.HeaderText = "idClient";
+            this.dataIdClient2.Name = "dataIdClient2";
+            this.dataIdClient2.ReadOnly = true;
+            this.dataIdClient2.Width = 150;
+            // 
+            // dataQuantite2
+            // 
+            this.dataQuantite2.DataPropertyName = "quantite";
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataQuantite2.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataQuantite2.HeaderText = "quantite";
+            this.dataQuantite2.Name = "dataQuantite2";
+            this.dataQuantite2.ReadOnly = true;
+            this.dataQuantite2.Width = 150;
+            // 
+            // dataDateC2
+            // 
+            this.dataDateC2.DataPropertyName = "dateC";
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataDateC2.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataDateC2.HeaderText = "dateC";
+            this.dataDateC2.Name = "dataDateC2";
+            this.dataDateC2.ReadOnly = true;
+            // 
+            // dataAdresseL2
+            // 
+            this.dataAdresseL2.DataPropertyName = "adresseL";
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.dataAdresseL2.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataAdresseL2.HeaderText = "adresseL";
+            this.dataAdresseL2.Name = "dataAdresseL2";
+            this.dataAdresseL2.ReadOnly = true;
+            // 
+            // dataDateL2
+            // 
+            this.dataDateL2.DataPropertyName = "dateL";
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.dataDateL2.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataDateL2.HeaderText = "dateL";
+            this.dataDateL2.Name = "dataDateL2";
+            this.dataDateL2.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dataGridViewButtonColumn2.HeaderText = "";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.ReadOnly = true;
+            this.dataGridViewButtonColumn2.Text = "Supprimer";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn2.Width = 150;
             // 
             // FormCommande
             // 
@@ -416,15 +376,6 @@
         private System.Windows.Forms.TextBox textBoxSearchModele;
         private System.Windows.Forms.DataGridView dataGridViewAchatPiece;
         private System.Windows.Forms.DataGridView dataGridViewAchatModele;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdCommande2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdModele;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdClient2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataQuantite2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDateC2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataAdresseL2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDateL2;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
         private System.Windows.Forms.TextBox textBoxSearchPiece;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataIdCommande1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataIdPiece;
@@ -433,7 +384,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDateC1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAdresseL1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDateL1;
-        private System.Windows.Forms.DataGridViewButtonColumn btnUpdate;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdCommande2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdModele;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdClient2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataQuantite2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDateC2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataAdresseL2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDateL2;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
     }
 }

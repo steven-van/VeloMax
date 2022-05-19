@@ -62,27 +62,27 @@ namespace VeloMax.ChildForms
 
         private void dataGridViewAchatPiece_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0) //Modifier
-            {
-                formAddCommande.ClearInputs();
-                //formAddClient.idClient = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[2].Value);
-                //formAddClient.type = dataGridViewBoutique.Rows[e.RowIndex].Cells[3].Value.ToString();
-                //formAddClient.adresse = dataGridViewBoutique.Rows[e.RowIndex].Cells[4].Value.ToString();
-                //formAddClient.courriel = dataGridViewBoutique.Rows[e.RowIndex].Cells[5].Value.ToString();
-                //formAddClient.telephone = dataGridViewBoutique.Rows[e.RowIndex].Cells[6].Value.ToString();
-                //formAddClient.nom = dataGridViewBoutique.Rows[e.RowIndex].Cells[7].Value.ToString();
-                //formAddClient.contact = dataGridViewBoutique.Rows[e.RowIndex].Cells[8].Value.ToString();
-                //formAddClient.remise = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[9].Value);
-                //formAddClient.volumeA = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[10].Value);
-                formAddCommande.UpdateInfo();
-                formAddCommande.ShowDialog();
-                return;
-            }
-            if (e.ColumnIndex == 1) //Supprimer
+            //if (e.ColumnIndex == 0) //Modifier
+            //{
+            //    formAddCommande.ClearInputs();
+            //    //formAddClient.idClient = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[2].Value);
+            //    //formAddClient.type = dataGridViewBoutique.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //    //formAddClient.adresse = dataGridViewBoutique.Rows[e.RowIndex].Cells[4].Value.ToString();
+            //    //formAddClient.courriel = dataGridViewBoutique.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //    //formAddClient.telephone = dataGridViewBoutique.Rows[e.RowIndex].Cells[6].Value.ToString();
+            //    //formAddClient.nom = dataGridViewBoutique.Rows[e.RowIndex].Cells[7].Value.ToString();
+            //    //formAddClient.contact = dataGridViewBoutique.Rows[e.RowIndex].Cells[8].Value.ToString();
+            //    //formAddClient.remise = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[9].Value);
+            //    //formAddClient.volumeA = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[10].Value);
+            //    //formAddCommande.UpdateInfo();
+            //    formAddCommande.ShowDialog();
+            //    return;
+            //}
+            if (e.ColumnIndex == 0) //Supprimer
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce client ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DBVeloMax.DeleteCommande(Convert.ToInt32(dataGridViewAchatPiece.Rows[e.RowIndex].Cells[2].Value));
+                    DBVeloMax.DeleteCommande(Convert.ToInt32(dataGridViewAchatPiece.Rows[e.RowIndex].Cells[1].Value));
                     DisplayCommandePiece();
                 }
                 return;
@@ -91,27 +91,27 @@ namespace VeloMax.ChildForms
 
         private void dataGridViewAchatModele_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0) //Modifier
-            {
-                formAddCommande.ClearInputs();
-                //formAddClient.idClient = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[2].Value);
-                //formAddClient.type = dataGridViewBoutique.Rows[e.RowIndex].Cells[3].Value.ToString();
-                //formAddClient.adresse = dataGridViewBoutique.Rows[e.RowIndex].Cells[4].Value.ToString();
-                //formAddClient.courriel = dataGridViewBoutique.Rows[e.RowIndex].Cells[5].Value.ToString();
-                //formAddClient.telephone = dataGridViewBoutique.Rows[e.RowIndex].Cells[6].Value.ToString();
-                //formAddClient.nom = dataGridViewBoutique.Rows[e.RowIndex].Cells[7].Value.ToString();
-                //formAddClient.contact = dataGridViewBoutique.Rows[e.RowIndex].Cells[8].Value.ToString();
-                //formAddClient.remise = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[9].Value);
-                //formAddClient.volumeA = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[10].Value);
-                formAddCommande.UpdateInfo();
-                formAddCommande.ShowDialog();
-                return;
-            }
-            if (e.ColumnIndex == 1) //Supprimer
+            //if (e.ColumnIndex == 0) //Modifier
+            //{
+            //    formAddCommande.ClearInputs();
+            //    //formAddClient.idClient = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[2].Value);
+            //    //formAddClient.type = dataGridViewBoutique.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //    //formAddClient.adresse = dataGridViewBoutique.Rows[e.RowIndex].Cells[4].Value.ToString();
+            //    //formAddClient.courriel = dataGridViewBoutique.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //    //formAddClient.telephone = dataGridViewBoutique.Rows[e.RowIndex].Cells[6].Value.ToString();
+            //    //formAddClient.nom = dataGridViewBoutique.Rows[e.RowIndex].Cells[7].Value.ToString();
+            //    //formAddClient.contact = dataGridViewBoutique.Rows[e.RowIndex].Cells[8].Value.ToString();
+            //    //formAddClient.remise = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[9].Value);
+            //    //formAddClient.volumeA = Convert.ToInt32(dataGridViewBoutique.Rows[e.RowIndex].Cells[10].Value);
+            //    //formAddCommande.UpdateInfo();
+            //    formAddCommande.ShowDialog();
+            //    return;
+            //}
+            if (e.ColumnIndex == 0) //Supprimer
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce client ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DBVeloMax.DeleteCommande(Convert.ToInt32(dataGridViewAchatModele.Rows[e.RowIndex].Cells[2].Value));
+                    DBVeloMax.DeleteCommande(Convert.ToInt32(dataGridViewAchatModele.Rows[e.RowIndex].Cells[1].Value));
                     DisplayCommandeModele();
                 }
                 return;
