@@ -41,7 +41,10 @@
             this.datePickerDateD = new System.Windows.Forms.DateTimePicker();
             this.numPrixU = new System.Windows.Forms.NumericUpDown();
             this.btnAddModele = new FontAwesome.Sharp.IconButton();
+            this.numStock = new System.Windows.Forms.NumericUpDown();
+            this.labelStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numPrixU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNom
@@ -197,7 +200,7 @@
             this.btnAddModele.IconChar = FontAwesome.Sharp.IconChar.Bicycle;
             this.btnAddModele.IconColor = System.Drawing.Color.White;
             this.btnAddModele.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddModele.Location = new System.Drawing.Point(374, 654);
+            this.btnAddModele.Location = new System.Drawing.Point(372, 694);
             this.btnAddModele.Name = "btnAddModele";
             this.btnAddModele.Size = new System.Drawing.Size(173, 65);
             this.btnAddModele.TabIndex = 26;
@@ -206,12 +209,39 @@
             this.btnAddModele.UseVisualStyleBackColor = false;
             this.btnAddModele.Click += new System.EventHandler(this.btnAddModele_Click);
             // 
+            // numStock
+            // 
+            this.numStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numStock.Location = new System.Drawing.Point(352, 619);
+            this.numStock.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numStock.Name = "numStock";
+            this.numStock.Size = new System.Drawing.Size(231, 26);
+            this.numStock.TabIndex = 34;
+            // 
+            // labelStock
+            // 
+            this.labelStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelStock.AutoSize = true;
+            this.labelStock.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.ForeColor = System.Drawing.Color.White;
+            this.labelStock.Location = new System.Drawing.Point(222, 619);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(68, 28);
+            this.labelStock.TabIndex = 35;
+            this.labelStock.Text = "Stock";
+            // 
             // FormAddModele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(824, 832);
+            this.Controls.Add(this.labelStock);
+            this.Controls.Add(this.numStock);
             this.Controls.Add(this.numPrixU);
             this.Controls.Add(this.datePickerDateD);
             this.Controls.Add(this.datePickerDateI);
@@ -230,6 +260,7 @@
             this.Text = "FormAddModele";
             this.Load += new System.EventHandler(this.FormCommande_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrixU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +280,7 @@
         private System.Windows.Forms.DateTimePicker datePickerDateI;
         private System.Windows.Forms.DateTimePicker datePickerDateD;
         private System.Windows.Forms.NumericUpDown numPrixU;
+        private System.Windows.Forms.NumericUpDown numStock;
+        private System.Windows.Forms.Label labelStock;
     }
 }

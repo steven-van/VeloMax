@@ -13,7 +13,7 @@ namespace VeloMax.ChildForms
     public partial class FormAddModele : Form
     {
         private readonly FormModele formParent;
-        public int idModele;
+        public int idModele, stock;
         public string nom, grandeur, ligneP;
         public double prixU;
         public DateTime dateI, dateD;
@@ -47,6 +47,7 @@ namespace VeloMax.ChildForms
             comboBoxGrandeur.Text = grandeur;
             numPrixU.Value = Convert.ToDecimal(prixU);
             comboBoxLigneP.Text = ligneP;
+            numStock.Value = stock;
             datePickerDateD.Value = dateD;
             datePickerDateI.Value = dateI;
 
@@ -97,7 +98,8 @@ namespace VeloMax.ChildForms
                 string ligneP = comboBoxLigneP.SelectedItem.ToString();
                 DateTime dateI = datePickerDateI.Value;
                 DateTime dateD = datePickerDateD.Value;
-                DBVeloMax.AddModele(nom,grandeur,prixU,ligneP,dateI,dateD);
+                int stock = Convert.ToInt32(numStock.Value);
+                DBVeloMax.AddModele(nom,grandeur,prixU,ligneP,dateI,dateD, stock);
                 ClearInputs();
             }
             if (btnAddModele.Text == "Modifier")
@@ -108,7 +110,9 @@ namespace VeloMax.ChildForms
                 string ligneP = comboBoxLigneP.SelectedItem.ToString();
                 DateTime dateI = datePickerDateI.Value;
                 DateTime dateD = datePickerDateD.Value;
-                DBVeloMax.UpdateModele(idModele, nom, grandeur, prixU, ligneP,dateI, dateD);
+                int stock = Convert.ToInt32(numStock.Value);
+
+                DBVeloMax.UpdateModele(idModele, nom, grandeur, prixU, ligneP,dateI, dateD, stock);
                 ClearInputs();
                 this.Close();
             }

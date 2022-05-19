@@ -98,7 +98,6 @@ namespace VeloMax
 
         #endregion
 
-
         #region Piece
 
         public static void AddPiece(string description, string categorie, double prixU, int stock, DateTime dateI, DateTime dateD, int delaiA)
@@ -175,12 +174,11 @@ namespace VeloMax
 
         #endregion
 
-
         #region Modele
 
-        public static void AddModele(string nom, string grandeur, double prixU, string ligneP, DateTime dateI, DateTime dateD)
+        public static void AddModele(string nom, string grandeur, double prixU, string ligneP, DateTime dateI, DateTime dateD, int stock)
         {
-            string query = "INSERT INTO Modele (nom, grandeur, prixU, ligneP, dateI, dateD) VALUES (@NOM, @GRANDEUR, @PRIXU, @LIGNEP, @DATEI, @DATED);";
+            string query = "INSERT INTO Modele (nom, grandeur, prixU, ligneP, dateI, dateD, stock) VALUES (@NOM, @GRANDEUR, @PRIXU, @LIGNEP, @DATEI, @DATED, @STOCK);";
             MySqlConnection connection = GetDBConnection();
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
@@ -190,6 +188,8 @@ namespace VeloMax
             cmd.Parameters.Add("@LIGNEP", MySqlDbType.VarChar).Value = ligneP;
             cmd.Parameters.Add("@DATEI", MySqlDbType.Date).Value = dateI;
             cmd.Parameters.Add("@DATED", MySqlDbType.Date).Value = dateD;
+            cmd.Parameters.Add("@STOCK", MySqlDbType.Int32).Value = stock;
+
             try
             {
                 cmd.ExecuteNonQuery();
@@ -222,9 +222,9 @@ namespace VeloMax
             connection.Close();
         }
 
-        public static void UpdateModele(int idModele, string nom, string grandeur, double prixU, string ligneP, DateTime dateI, DateTime dateD)
+        public static void UpdateModele(int idModele, string nom, string grandeur, double prixU, string ligneP, DateTime dateI, DateTime dateD, int stock)
         {
-            string query = "UPDATE Modele SET nom = @NOM, grandeur = @GRANDEUR, prixU = @PRIXU, ligneP = @LIGNEP, dateI = @DATEI, dateD = @DATED WHERE idModele = @IDMODELE;";
+            string query = "UPDATE Modele SET nom = @NOM, grandeur = @GRANDEUR, prixU = @PRIXU, ligneP = @LIGNEP, dateI = @DATEI, dateD = @DATED, stock = @STOCK WHERE idModele = @IDMODELE;";
             MySqlConnection connection = GetDBConnection();
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.CommandType = CommandType.Text;
@@ -235,6 +235,8 @@ namespace VeloMax
             cmd.Parameters.Add("@LIGNEP", MySqlDbType.VarChar).Value = ligneP;
             cmd.Parameters.Add("@DATEI", MySqlDbType.Date).Value = dateI;
             cmd.Parameters.Add("@DATED", MySqlDbType.Date).Value = dateD;
+            cmd.Parameters.Add("@STOCK", MySqlDbType.Int32).Value = stock;
+
             try
             {
                 cmd.ExecuteNonQuery();
@@ -249,7 +251,6 @@ namespace VeloMax
         }
 
         #endregion
-
 
         #region Client
 
@@ -544,6 +545,59 @@ namespace VeloMax
             catch (MySqlException ex)
             {
                 MessageBox.Show("Erreur, la commande n'a pas été mise à jour \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+        #region Achat_piece
+
+        public static void AddAchat_piece(int idCommande, int idPiece, int quantite)
+        {
+            string query = "INSERT INTO Achat_piece (idCommande, idPiece, quantite) VALUES (@IDCOMMANDE, @IDPIECE, @QUANTITE);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCOMMANDE", MySqlDbType.Int32).Value = idCommande;
+            cmd.Parameters.Add("@IDPIECE", MySqlDbType.Int32).Value = idPiece;
+            cmd.Parameters.Add("@QUANTITE", MySqlDbType.Int32).Value = quantite;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Achat de la pièce ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'achat de la pièce n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+
+        }
+
+        #endregion
+
+
+        #region Achat_modele
+
+        public static void AddAchat_modele(int idCommande, int idModele, int quantite)
+        {
+            string query = "INSERT INTO Achat_modele (idCommande, idModele, quantite) VALUES (@IDCOMMANDE, @IDMODELE, @QUANTITE);";
+            MySqlConnection connection = GetDBConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@IDCOMMANDE", MySqlDbType.Int32).Value = idCommande;
+            cmd.Parameters.Add("@IDMODELE", MySqlDbType.Int32).Value = idModele;
+            cmd.Parameters.Add("@QUANTITE", MySqlDbType.Int32).Value = quantite;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Achat du modèle ajouté avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erreur, l'achat du modèle n'a pas été ajouté \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
 

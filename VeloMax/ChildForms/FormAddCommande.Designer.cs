@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
-            this.textBoxContact = new System.Windows.Forms.TextBox();
+            this.textBoxAdresseL = new System.Windows.Forms.TextBox();
             this.labelClient = new System.Windows.Forms.Label();
             this.labelDateL = new System.Windows.Forms.Label();
             this.labelAdresseL = new System.Windows.Forms.Label();
@@ -62,14 +62,14 @@
             this.comboBoxClient.Size = new System.Drawing.Size(231, 28);
             this.comboBoxClient.TabIndex = 21;
             // 
-            // textBoxContact
+            // textBoxAdresseL
             // 
-            this.textBoxContact.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxContact.Location = new System.Drawing.Point(292, 409);
-            this.textBoxContact.MaxLength = 20;
-            this.textBoxContact.Name = "textBoxContact";
-            this.textBoxContact.Size = new System.Drawing.Size(231, 26);
-            this.textBoxContact.TabIndex = 19;
+            this.textBoxAdresseL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAdresseL.Location = new System.Drawing.Point(292, 409);
+            this.textBoxAdresseL.MaxLength = 20;
+            this.textBoxAdresseL.Name = "textBoxAdresseL";
+            this.textBoxAdresseL.Size = new System.Drawing.Size(231, 26);
+            this.textBoxAdresseL.TabIndex = 19;
             // 
             // labelClient
             // 
@@ -231,7 +231,7 @@
             this.Controls.Add(this.labelPiece);
             this.Controls.Add(this.btnAddCommande);
             this.Controls.Add(this.comboBoxClient);
-            this.Controls.Add(this.textBoxContact);
+            this.Controls.Add(this.textBoxAdresseL);
             this.Controls.Add(this.labelClient);
             this.Controls.Add(this.labelDateL);
             this.Controls.Add(this.labelAdresseL);
@@ -239,6 +239,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAddCommande";
             this.Text = "FormAddCommande";
+            this.Shown += new System.EventHandler(this.FormAddCommande_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.numModele)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPiece)).EndInit();
             this.ResumeLayout(false);
@@ -250,7 +251,7 @@
 
         private FontAwesome.Sharp.IconButton btnAddCommande;
         private System.Windows.Forms.ComboBox comboBoxClient;
-        private System.Windows.Forms.TextBox textBoxContact;
+        private System.Windows.Forms.TextBox textBoxAdresseL;
         private System.Windows.Forms.Label labelClient;
         private System.Windows.Forms.Label labelDateL;
         private System.Windows.Forms.Label labelAdresseL;

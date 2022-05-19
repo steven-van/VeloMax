@@ -22,7 +22,7 @@ namespace VeloMax.ChildForms
 
         public void DisplayModele()
         {
-            DBVeloMax.DisplayAndSearch("SELECT idModele, nom, grandeur, prixU, ligneP, dateI, dateD FROM Modele;", dataGridViewModele);
+            DBVeloMax.DisplayAndSearch("SELECT idModele, nom, grandeur, prixU, ligneP, dateI, dateD, stock FROM Modele;", dataGridViewModele);
         }
 
         private void FormModele_Shown(object sender, EventArgs e)
@@ -49,6 +49,7 @@ namespace VeloMax.ChildForms
                 formAddModele.ligneP = dataGridViewModele.Rows[e.RowIndex].Cells[6].Value.ToString();
                 formAddModele.dateI = dataGridViewModele.Rows[e.RowIndex].Cells[7].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewModele.Rows[e.RowIndex].Cells[7].Value);
                 formAddModele.dateD = dataGridViewModele.Rows[e.RowIndex].Cells[8].Value.ToString() == "" ? DateTime.Now : Convert.ToDateTime(dataGridViewModele.Rows[e.RowIndex].Cells[8].Value);
+                formAddModele.stock = Convert.ToInt32(dataGridViewModele.Rows[e.RowIndex].Cells[9].Value);
                 formAddModele.UpdateInfo();
                 formAddModele.ShowDialog();
                 return;
@@ -66,7 +67,7 @@ namespace VeloMax.ChildForms
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            DBVeloMax.DisplayAndSearch("SELECT idModele, nom, grandeur, prixU, ligneP, dateI, dateD FROM Modele WHERE nom LIKE '%" + textBoxSearch.Text + "%';", dataGridViewModele);
+            DBVeloMax.DisplayAndSearch("SELECT idModele, nom, grandeur, prixU, ligneP, dateI, dateD, stock FROM Modele WHERE nom LIKE '%" + textBoxSearch.Text + "%';", dataGridViewModele);
         }
     }
 }

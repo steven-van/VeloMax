@@ -20,11 +20,6 @@ namespace VeloMax.ChildForms
             formAddCommande = new FormAddCommande(this);
         }
 
-        private void FormCommande_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void DisplayCommandePiece()
         {
             DBVeloMax.DisplayAndSearch("SELECT idCommande, idPiece, idClient, quantite, dateC, adresseL, dateL FROM Commande NATURAL JOIN Achat_Piece;", dataGridViewAchatPiece);
@@ -87,7 +82,7 @@ namespace VeloMax.ChildForms
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce client ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DBVeloMax.DeleteClient(Convert.ToInt32(dataGridViewAchatPiece.Rows[e.RowIndex].Cells[2].Value));
+                    DBVeloMax.DeleteCommande(Convert.ToInt32(dataGridViewAchatPiece.Rows[e.RowIndex].Cells[2].Value));
                     DisplayCommandePiece();
                 }
                 return;
@@ -116,7 +111,7 @@ namespace VeloMax.ChildForms
             {
                 if (MessageBox.Show("Êtes-vous sûr de vouloir supprimer ce client ?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DBVeloMax.DeleteClient(Convert.ToInt32(dataGridViewAchatModele.Rows[e.RowIndex].Cells[2].Value));
+                    DBVeloMax.DeleteCommande(Convert.ToInt32(dataGridViewAchatModele.Rows[e.RowIndex].Cells[2].Value));
                     DisplayCommandeModele();
                 }
                 return;
